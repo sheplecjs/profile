@@ -77,7 +77,7 @@
         <div class="block">
                 <div class="columns content-page is-vcentered is-centered" id="menu-div">
                     <div class="column">
-                        <img id="main-img" src="static/cover.jpg" alt="Lake Lucerne from Weggis"/>
+                        <img id="main-img" src="https://cshepley.s3.eu-central-1.amazonaws.com/assets/cover.jpg" alt="Lake Lucerne from Weggis"/>
                     </div>
                     <div class="column is-two-thirds">
                         <div class="box" style="text-align: center;">
@@ -389,7 +389,7 @@
         const height = document.getElementById("menu-div").clientHeight * 0.65
         
         // parse and group data
-        const data = await d3.csv("/static/cv.csv")
+        const data = await d3.csv("https://cshepley.s3.eu-central-1.amazonaws.com/assets/cv.csv")
         const locations = d3.group(data, d=>d.location)
         
         // unique locations
@@ -554,7 +554,7 @@ let filteredData = data.sort((a,b)=>  a.start-b.start);
       async function chartSkill() {
 
             // grab data for the graph
-            const data = await d3.json("/static/skill.json")
+            const data = await d3.json("https://cshepley.s3.eu-central-1.amazonaws.com/assets/skill.json")
 
             // set margins
             const margin = ({top: 10, right: 120, bottom: 10, left: 40})
