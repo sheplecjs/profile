@@ -1,471 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>C Shepley</title>
-    <style>
 
-        #timeline {
-            background: url("travel.png");
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: top center;
-        }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C Shepley</title>
+  <style>
+    #timeline {
+      background: url("travel.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: top center;
+    }
 
-        .timeline-rect {
-            opacity: 0.7;
-        }
+    .timeline-rect {
+      opacity: 0.7;
+    }
 
-        .breads-hidden {
-            visibility: hidden;
-        }
+    .breads-hidden {
+      visibility: hidden;
+    }
 
-        #main-img {
-            max-width: 300px;
-            object-fit: "cover";
-            filter: contrast(130%);
-        }
+    #main-img {
+      max-width: 300px;
+      object-fit: "cover";
+      filter: contrast(130%);
+    }
 
-        #menu-div {
-            position: static;
-        }
+    #menu-div {
+      position: static;
+    }
 
-        #about-div {
-            position: absolute;
-            visibility: hidden;
-        }
-        
-        /* https://eiji.dev/bulma-tabs-with-content.html */
-        #tabs-with-content .tabs:not(:last-child) {
-        margin-bottom: 0;
-        }
+    #about-div {
+      position: absolute;
+      visibility: hidden;
+    }
 
-        #tabs-with-content .tab-content {
-        padding: 1rem;
-        display: none;
-        }
+    /* https://eiji.dev/bulma-tabs-with-content.html */
+    #tabs-with-content .tabs:not(:last-child) {
+      margin-bottom: 0;
+    }
 
-        #tabs-with-content .tab-content.is-active {
-        display: block;
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    #tabs-with-content .tab-content {
+      padding: 1rem;
+      display: none;
+    }
 
-    <!-- D3 js deps -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-  </head>
-  <body>
+    #tabs-with-content .tab-content.is-active {
+      display: block;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+  <!-- D3 js deps -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
   <section class="section">
     <div class="container">
-        <div class="block">
-            <nav class="breadcrumb" aria-label="breadcrumbs">
-                <ul>
-                  <li id="menu-bread"><a href="#" onclick="bring_to_front('menu', 'main-img', '300px')">
-                        C Shepley
-                  </a></li>
-                  <li class="breads breads-hidden" id="about-bread"><a href="#">About</a></li>
-                  <li class="breads breads-hidden"><a href="#">Components</a></li>
-                </ul>
-              </nav>
-            
+      <div class="block">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li id="menu-bread"><a href="#" onclick="bring_to_front('menu', 'main-img', '300px')">
+                C Shepley
+              </a></li>
+            <li class="breads breads-hidden" id="about-bread"><a href="#">About</a></li>
+            <li class="breads breads-hidden"><a href="#">Components</a></li>
+          </ul>
+        </nav>
+
+      </div>
+      <div class="block">
+        <div class="columns content-page is-vcentered is-centered" id="menu-div">
+          <div class="column">
+            <img id="main-img" src="cover.jpg" alt="Lake Lucerne from Weggis" />
+          </div>
+          <div class="column is-two-thirds">
+            <div class="box" style="text-align: center;">
+              <a href="#" onclick="bring_to_front('about', 'about-img', '100%'); tabbedContent();">
+                <span class="icon-text">
+                  <span class="icon">
+                    <ion-icon name="finger-print-outline"></ion-icon>
+                  </span>
+                  <span class="subtitle">
+                    <strong> Interactive CV</strong>
+                  </span>
+                </span>
+              </a>
+            </div>
+
+            <div class="box" style="text-align: center;">
+              <a href="mailto:cshepley@pm.me"">
+                                <span class=" icon-text">
+                <span class="icon">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </span>
+                <span class="subtitle">
+                  <strong> Contact</strong>
+                </span>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="block">
-                <div class="columns content-page is-vcentered is-centered" id="menu-div">
-                    <div class="column">
-                        <img id="main-img" src="cover.jpg" alt="Lake Lucerne from Weggis"/>
+
+        <!-- about content -->
+        <!-- tabbed content adapted from https://eiji.dev/bulma-tabs-with-content.html -->
+        <div class="columns content-page is-centered" id="about-div">
+          <div class="column is-three-quarters">
+            <div class="box">
+              <div id="tabs-with-content">
+                <div class="tabs is-centered is-fullwidth">
+                  <ul>
+                    <li><a>Intro</a></li>
+                    <li><a>Education & Employment</a></li>
+                    <li><a>Tools & Frameworks</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <section class="tab-content">
+                    <div class="content">
+                      <div class="columns is-vcentered">
+                        <div class="column">
+                          <figure>
+                            <img id="about-img" src="cat.jpg" alt="Stay cool cat" />
+                            </figcaption>
+                          </figure>
+                        </div>
+                        <div class="column is-two-thirds">
+                          <div class="content">
+                            <h2>What is this?</h2>
+                            <br></br>
+                            <h6>This is an interactive version of my resume.
+                              It's a bit more detailed and hopefully a bit more interesting.
+                              Click on a tab above to have a look.</h6>
+
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="column is-two-thirds">
-                        <div class="box" style="text-align: center;">
-                            <a href="#" onclick="bring_to_front('about', 'about-img', '100%'); tabbedContent();">
-                                <span class="icon-text">
-                                    <span class="icon">
-                                        <ion-icon name="finger-print-outline"></ion-icon>
-                                    </span>
-                                    <span class="subtitle">
-                                        <strong> Interactive CV</strong>
-                                    </span>
-                                </span>
-                            </a>
+                  </section>
+                  <section class="tab-content" id="timeline-parent">
+                    <p class="is-size-6">Places I've been and for what.</p>
+                    <br>
+                    <p class="is-size-7"><strong>Hover</strong> over a role for more info.</p>
+                    </br>
+                    <svg id="timeline" style="width: 100%;">
+                    </svg>
+                  </section>
+                  <section class="tab-content">
+                    <div class="block">
+                      <p class="is-size-6">Some projects I've worked on and the tools/frameworks I've enjoyed using.
+                      </p>
+
+                      <span class="icon js-modal-trigger" style="float: right;" data-target="modal-skill-license"
+                        id="skill-license">
+                        <ion-icon class="is-size-4" name="information-circle-outline"></ion-icon>
+                      </span>
+
+                      <br>
+                      <p class="is-size-7"><strong>Click a project</strong> for details. </p>
+                      <p class="is-size-7"><strong>Click an arrow node</strong> to expand/hide. </p>
+                      <p class="is-size-7"><strong>Hover</strong> over a tool/framework label to see which projects used
+                        it. </p>
+                      </p>
+                    </div>
+                    <div class="columns is-vcentered is-gapless">
+                      <div class="column">
+                        <br>
+                        <div class="block has-text-centered">
+                          <div class="content">
+                            <button type="button" class="button is-normal is-info js-modal-trigger"
+                              data-target="modal-qm" id="qm">
+                              QM Platform
+                            </button>
+                          </div>
+                          <div class="content">
+                            <button class="button is-normal is-info js-modal-trigger" data-target="modal-cf" id="cf">
+                              Contact Flag
+                            </button>
+                          </div>
+
+                          <div class="content">
+                            <button class="button is-normal is-info js-modal-trigger" data-target="modal-bcad"
+                              id="bcad">
+                              BC & AD
+                            </button>
+                          </div>
+                          <div class="content">
+                            <button class="button is-normal is-info js-modal-trigger" data-target="modal-msc" id="MSc">
+                              MSc Coursework
+                            </button>
+                          </div>
                         </div>
 
-                        <div class="box" style="text-align: center;">
-                            <a href="mailto:cshepley@pm.me"">
-                                <span class="icon-text">
-                                    <span class="icon">
-                                        <ion-icon name="mail-outline"></ion-icon>
-                                    </span>
-                                    <span class="subtitle">
-                                        <strong> Contact</strong>
-                                    </span>
-                                </span>
-                            </a>
+                      </div>
+                      <div class="column is-four-fifths">
+                        <div class="block">
+                          <svg id="skill-tree" style="width: 100%; padding: 2em;"></svg>
+                          <svg id="legend"
+                            style="width: 32em; height: 60px; float: right; padding: 1em; border: 2px solid grey;"></svg>
                         </div>
-                    </div>
-                </div>  
+                      </div>
+                      </svg>
+                  </section>
+                </div>
+              </div>
+            </div>
 
-                <!-- about content -->
-                <!-- tabbed content adapted from https://eiji.dev/bulma-tabs-with-content.html -->
-                <div class="columns content-page is-centered" id="about-div">
-                    <div class="column is-three-quarters">
-                        <div class="box">
-                            <div id="tabs-with-content">
-                                <div class="tabs is-centered is-fullwidth">
-                                  <ul>
-                                    <li><a>Intro</a></li>
-                                    <li><a>Education & Employment</a></li>
-                                    <li><a>Tools & Frameworks</a></li>
-                                  </ul>
-                                </div>
-                                <div>
-                                  <section class="tab-content">
-                                      <div class="content">
-                                        <div class="columns is-vcentered">
-                                          <div class="column">
-                                            <figure>
-                                            <img id="about-img" src="cat.jpg" alt="Stay cool cat"/>
-                                            </figcaption>
-                                          </figure>
-                                        </div>
-                                        <div class="column is-two-thirds">
-                                          <div class="content">
-                                          <h2>What is this?</h2>
-                                          <br></br>
-                                          <h6>This is an interactive version of my resume. 
-                                              It's a bit more detailed and hopefully a bit more interesting. 
-                                              Click on a tab above to have a look.</h6>
-
-                                            </div>
-                                            </div>
-                                          </div>
-                                      </div>
-                                  </section>
-                                  <section class="tab-content" id="timeline-parent">
-                                    <p class="is-size-6">Places I've been and for what.</p> 
-                                    <br>
-                                    <p class="is-size-7"><strong>Hover</strong> over a role for more info.</p>
-                                  </br>
-                                      <svg id="timeline" style="width: 100%;">
-                                      </svg>
-                                  </section>
-                                  <section class="tab-content">
-                                      <div class="block">
-                                      <p class="is-size-6">Some projects I've worked on and the tools/frameworks I've enjoyed using.
-                                        </p>
-                                      
-                                        <span class="icon js-modal-trigger" style="float: right;" data-target="modal-skill-license" id="skill-license">
-                                          <ion-icon class="is-size-4" name="information-circle-outline"></ion-icon>
-                                      </span>
-                  
-                                        <br>
-                                        <p class="is-size-7"><strong>Click a project</strong> for details. </p>
-                                        <p class="is-size-7"><strong>Click an arrow node</strong> to expand/hide. </p>
-                                        <p class="is-size-7"><strong>Hover</strong> over a tool/framework label to see which projects used it. </p>
-                                      </p>
-                                    </div>
-                                      <div class="columns is-vcentered is-gapless">
-                                        <div class="column">
-                                          <br>
-                                            <div class="block has-text-centered">
-                                                <div class="content">
-                                            <button type="button" class="button is-normal is-info js-modal-trigger" data-target="modal-qm" id="qm">
-                                                QM Platform
-                                              </button>
-                                            </div>
-                                            <div class="content">
-                                              <button class="button is-normal is-info js-modal-trigger" data-target="modal-cf" id="cf">
-                                                  Contact Flag
-                                              </button>
-                                            </div>
-                
-                                            <div class="content">
-                                              <button class="button is-normal is-info js-modal-trigger" data-target="modal-bcad" id="bcad">
-                                                  BC & AD
-                                                </button>
-                                              </div>
-                                              <div class="content">
-                                              <button class="button is-normal is-info js-modal-trigger" data-target="modal-msc" id="MSc">
-                                                  MSc Coursework
-                                              </button>
-                                            </div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="column is-four-fifths">
-                                            <div class="block">
-                                            <svg id="skill-tree" style="width: 100%; padding: 2em;"></svg>
-                                            <svg id="legend" style="width: 32em; height: 60px; float: right; padding: 1em; border: 2px solid grey;"></svg>
-                                        </div>
-                                        </div>
-                                    </svg>
-                                  </section>
-                                </div>
-                              </div>
-                        </div>
-                        
-                    </div>
-                </div>  
+          </div>
         </div>
+      </div>
     </div>
- 
-   
+
+
   </section>
- <!-- THEIA modal -->
+  <!-- QM modal -->
   <div id="modal-qm" class="modal">
     <div class="modal-background"></div>
-  
+
     <div class="modal-content">
       <div class="box">
         <p class="subtitle">Quality Monitoring Platform</p>
-        
+
         <!-- Your content -->
-        <p class="is-size-7"><strong>Problem statement: </strong>Infrastructure is needed for implementing our quality monitoring
-          processes that allows them to be followed more effectively while also increasing efficiently and transparently.</p>
+        <p class="is-size-7"><strong>Problem statement: </strong>Infrastructure is needed for implementing our quality
+          monitoring
+          processes that allows them to be followed more effectively while also increasing efficiently and
+          transparently.</p>
         <br>
-        <p class="is-size-7"><strong>Solution: </strong>Created ETL pipelines to read, filter, and preprocess data from primary platform Hive backend
-        and write to an isolated RDB serving as backend for a purpose-built web application. The UI for this application allows for role-restricted
-        reporting, casework assignment, and case processing, while providing access to modular communication template snippets in a WYSIWYG editor 
-        integrated with a third-party API facilitating one-way email communication.</p>
+        <p class="is-size-7"><strong>Solution: </strong>Created ETL pipelines to read, filter, and preprocess data from
+          primary platform Hive backend
+          and write to an isolated RDB serving as backend for a purpose-built web application. The UI for this
+          application allows for role-restricted
+          reporting, casework assignment, and case processing, while providing access to modular communication template
+          snippets in a WYSIWYG editor
+          integrated with a third-party API facilitating one-way email communication.</p>
         <br>
         <p class="is-size-7"><strong>Primary Technologies: </strong>Django, Bootstrap, Postgresql, Airflow</p>
         <br>
-        <p class="is-size-7"><strong>Code Sample: </strong>A <a href="https://github.com/sheplecjs/samples">reporting query</a> run to provide formatted table for analysts to
-        build custom dashboards for KPI monitoring.</p>
+        <p class="is-size-7"><strong>Code Sample: </strong>A <a href="https://github.com/sheplecjs/samples">reporting
+            query</a> run to provide formatted table for analysts to
+          build custom dashboards for KPI monitoring.</p>
       </div>
 
     </div>
-  
+
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
   <!-- BC & AD modal -->
   <div id="modal-bcad" class="modal">
     <div class="modal-background"></div>
-  
+
     <div class="modal-content">
       <div class="box">
         <p class="subtitle">Behavior Classification & Anomaly Detection</p>
-        
+
         <!-- Your content -->
-        <p class="is-size-7"><strong>Problem statement: </strong>With 40,000+ hours of services delivered per month, product volume is
-          too large to monitor for adherence to quality standards. A system is needed that helps us allocate our quality control resources
+        <p class="is-size-7"><strong>Problem statement: </strong>With 40,000+ hours of services delivered per month,
+          product volume is
+          too large to monitor for adherence to quality standards. A system is needed that helps us allocate our quality
+          control resources
           more precisely where it is needed and to achieve specific and measurable impact.</p>
         <br>
-        <p class="is-size-7"><strong>Solution: </strong>Built a highly scalable workflow to scan video to extract features usable by classification
-          models and create composite images that are useful both for rapid diagnostic review by humans, and further feature extraction for anomaly
+        <p class="is-size-7"><strong>Solution: </strong>Built a highly scalable workflow to scan video to extract
+          features usable by classification
+          models and create composite images that are useful both for rapid diagnostic review by humans, and further
+          feature extraction for anomaly
           detection - namely pixel color intensity indicating platform tool use during the session.</p>
         <br>
-        <p class="is-size-7"><strong>Primary Technologies: </strong>OpenCV python, Scikit-learn, AWS EC2, AWS S3, Postgresql</p>
+        <p class="is-size-7"><strong>Primary Technologies: </strong>OpenCV python, Scikit-learn, AWS EC2, AWS S3,
+          Postgresql</p>
         <br>
-        <p class="is-size-7"><strong>Code Sample: </strong>A <a href="https://github.com/sheplecjs/samples">script</a> run in parallel to extract features from video frames.
-          A HAAR cascade checks a section of the frame for a face, while successive frames are layered to create a summary composite of the
-          entire video. This composite is then uploaded to an S3 bucket connected to other postprocessing pipelines and linked to the QM Platform.</p>
+        <p class="is-size-7"><strong>Code Sample: </strong>A <a href="https://github.com/sheplecjs/samples">script</a>
+          run in parallel to extract features from video frames.
+          A HAAR cascade checks a section of the frame for a face, while successive frames are layered to create a
+          summary composite of the
+          entire video. This composite is then uploaded to an S3 bucket connected to other postprocessing pipelines and
+          linked to the QM Platform.</p>
       </div>
 
     </div>
-  
+
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-<!-- MSc modal -->
-<div id="modal-msc" class="modal">
-  <div class="modal-background"></div>
+  <!-- MSc modal -->
+  <div id="modal-msc" class="modal">
+    <div class="modal-background"></div>
 
-  <div class="modal-content">
-    <div class="box content">
-      <p>MSc Coursework</p>
-      <!-- Your content -->
-      <p class="is-size-7">
-      Below are brief descriptions of substantial assignments:
+    <div class="modal-content">
+      <div class="box content">
+        <p>MSc Coursework</p>
+        <!-- Your content -->
+        <p class="is-size-7">
+          Below are brief descriptions of substantial assignments:
         <ul>
-          <li class="is-size-7"><em>Multi-label Classification of Product Labels (TF-IDF & NB complement)</em></li>
-          <li class="is-size-7"><em>Deep Recurrent Neural Network Architecture Search (functional hypermodels)</em></li>
-          <li class="is-size-7"><em>Distributed Queries for LMS Logs Analysis (spark & interpretable modeling)</em></li>
+          <li class="is-size-7"><em>Multi-label Classification of Product Labels (TF-IDF & NB classification)</em></li>
+          <li class="is-size-7"><em>Deep Recurrent Neural Network Architecture Search (functional hypermodel)</em></li>
+          <li class="is-size-7"><em>Distributed Insights for LMS Logs Analysis (spark & interpretable modeling)</em></li>
         </ul>
-      </p>
+        </p>
+      </div>
     </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
+  <!-- Contact Flag modal -->
+  <div id="modal-cf" class="modal">
+    <div class="modal-background"></div>
 
-<!-- Contact Flag modal -->
-<div id="modal-cf" class="modal">
-  <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <p class="subtitle">Contact & Content Flagging</p>
 
-  <div class="modal-content">
-    <div class="box">
-      <p class="subtitle">Contact & Content Flagging</p>
-
-       <!-- Your content -->
-       <p class="is-size-7"><strong>Problem statement: </strong>Substantial text-based interaction occurs between our customers and service providers
-        in both real-time chat and post-service reports sent directly to customers. We would like to be able to intervene to prevent problematic interactions,
-        especially where service providers are providing personal contact details in violation of policies.</p>
-      <br>
-      <p class="is-size-7"><strong>Solution: </strong>Designed and implemented a multi-threaded program for collecting, cleaning, and aggregating text from multiple non-public 
-        api endpoints. The results are then processed by a series of keyword sieves that flag potentially problematic communications with high precision.</p>
-      <br>
-      <p class="is-size-7"><strong>Primary Technologies: </strong>Requests, BeautifulSoup, NLTK</p>
-      </p>
+        <!-- Your content -->
+        <p class="is-size-7"><strong>Problem statement: </strong>Substantial text-based interaction occurs between our
+          customers and service providers
+          in both real-time chat and post-service reports sent directly to customers. We would like to be able to
+          intervene to prevent problematic interactions,
+          especially where service providers are providing personal contact details in violation of policies.</p>
+        <br>
+        <p class="is-size-7"><strong>Solution: </strong>Designed and implemented a multi-threaded program for
+          collecting, cleaning, and aggregating text from multiple non-public
+          api endpoints. The results are then processed by a series of keyword sieves that flag potentially problematic
+          communications with high precision.</p>
+        <br>
+        <p class="is-size-7"><strong>Primary Technologies: </strong>Requests, BeautifulSoup, NLTK</p>
+        </p>
+      </div>
     </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
+  <!-- Contact Flag modal -->
+  <div id="modal-skill-license" class="modal">
+    <div class="modal-background"></div>
 
-<!-- Contact Flag modal -->
-<div id="modal-skill-license" class="modal">
-  <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <p class="subtitle">License & Notice</p>
 
-  <div class="modal-content">
-    <div class="box">
-      <p class="subtitle">License & Notice</p>
+        <p>Adapted from a a target="_blank" rel="noopener" href="https://observablehq.com/@d3/collapsible-tree">collapsable tree</a>
+          example on Observable published
+          under the a target="_blank" rel="noopener" href="https://choosealicense.com/licenses/isc/">ISC License</a>.</p>
 
-      <p>Adapted from a <a target="_blank" href="https://observablehq.com/@d3/collapsible-tree">collapsable tree</a> example on Observable published
-        under the <a target="_blank" href="https://choosealicense.com/licenses/isc/">ISC License</a></p>
+        <br>
 
-      <br>
+        <p><strong>Copyright 2018-2020 Observable, Inc.</strong></p>
 
-      <p><strong>Copyright 2018-2020 Observable, Inc.</strong></p>
+        <br>
 
-      <br>
+        <p>Permission to use, copy, modify, and/or distribute this software for any
+          purpose with or without fee is hereby granted, provided that the above
+          copyright notice and this permission notice appear in all copies.</p>
 
-      <p>Permission to use, copy, modify, and/or distribute this software for any
-      purpose with or without fee is hereby granted, provided that the above
-      copyright notice and this permission notice appear in all copies.</p>
+        <br>
 
-      <br>
-
-      <p class="is-size-7">THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-        REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-        AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-        INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-        LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-        OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-        PERFORMANCE OF THIS SOFTWARE.</p>
+        <p class="is-size-7">THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+          REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+          AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+          INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+          LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+          OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+          PERFORMANCE OF THIS SOFTWARE.</p>
+      </div>
     </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
+  <!-- ionicons deps -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <!-- ionicons deps -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  </body>
+</body>
 
-  <!-- for hiding and revealing content -->
-  <script>
-      function bring_to_front(div_name, max_width) {
-        
-        // select all content pages
-        var allContent = document.querySelectorAll(".content-page");
-        var allCrumbs = document.querySelectorAll(".breads");
+<!-- for hiding and revealing content -->
+<script>
+  function bring_to_front(div_name, max_width) {
 
-        // hide and shift all content up
-        allContent.forEach(function (content) {
-            content.style.visibility = "hidden";
-            content.style.position = "absolute";
+    // select all content pages
+    var allContent = document.querySelectorAll(".content-page");
+    var allCrumbs = document.querySelectorAll(".breads");
+
+    // hide and shift all content up
+    allContent.forEach(function (content) {
+      content.style.visibility = "hidden";
+      content.style.position = "absolute";
+    });
+
+    // hide any active crumbs
+    allCrumbs.forEach(function (crumb) {
+      if (!crumb.classList.contains("breads-hidden")) {
+        crumb.classList.add("breads-hidden");
+      };
+    })
+
+    // set our target content fixed and visible, then ensure the image is correctly sized and add breadcrumb
+    let targetContent = document.getElementById(div_name + "-div");
+    targetContent.style.position = "static";
+    targetContent.style.visibility = "visible";
+
+    // remove breadcrumb hiding
+    document.getElementById(div_name + "-bread").classList.remove("breads-hidden");
+
+    // configure content image
+    document.getElementById("main-img").style.objectFit = "cover";
+    document.getElementById("main-img").style.maxWidth = max_width;
+  }
+</script>
+
+<!-- for tabbed content - adapted from: https://eiji.dev/bulma-tabs-with-content.html -->
+<script>
+  async function tabbedContent() {
+    let tabsWithContent = (function () {
+      let tabs = document.querySelectorAll(".tabs li");
+      let tabsContent = document.querySelectorAll(".tab-content");
+
+      let deactivateAllTabs = function () {
+        tabs.forEach(function (tab) {
+          tab.classList.remove("is-active");
         });
+      };
 
-        // hide any active crumbs
-        allCrumbs.forEach(function (crumb) {
-            if (!crumb.classList.contains("breads-hidden")) {
-            crumb.classList.add("breads-hidden");
-            };
-        })
-        
-        // set our target content fixed and visible, then ensure the image is correctly sized and add breadcrumb
-        let targetContent = document.getElementById(div_name + "-div");
-        targetContent.style.position = "static";
-        targetContent.style.visibility = "visible";
+      let hideTabsContent = function () {
+        tabsContent.forEach(function (tabContent) {
+          tabContent.classList.remove("is-active");
+        });
+      };
 
-        // remove breadcrumb hiding
-        document.getElementById(div_name + "-bread").classList.remove("breads-hidden");
+      let getIndex = function (el) {
+        return [...el.parentElement.children].indexOf(el);
+      };
 
-        // configure content image
-        document.getElementById("main-img").style.objectFit = "cover";
-        document.getElementById("main-img").style.maxWidth = max_width;
-      }
-  </script>
+      let activateTabsContent = function (tab) {
+        tabsContent[getIndex(tab)].classList.add("is-active");
+      };
 
-  <!-- for tabbed content - adapted from: https://eiji.dev/bulma-tabs-with-content.html -->
-  <script>
-      async function tabbedContent() {
-            let tabsWithContent = (function () {
-            let tabs = document.querySelectorAll(".tabs li");
-            let tabsContent = document.querySelectorAll(".tab-content");
+      tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          deactivateAllTabs();
+          hideTabsContent();
+          tab.classList.add("is-active");
+          activateTabsContent(tab);
+        });
+      })
 
-            let deactivateAllTabs = function () {
-                tabs.forEach(function (tab) {
-                tab.classList.remove("is-active");
-                });
-            };
+      tabs[0].click();
+    })();
+  }
+</script>
 
-            let hideTabsContent = function () {
-                tabsContent.forEach(function (tabContent) {
-                tabContent.classList.remove("is-active");
-                });
-            };
+<!-- d3 js for mapped timeline -->
+<script crossorigin="anonymous">
+  async function chartTimeline() {
 
-            let getIndex = function (el) {
-                return [...el.parentElement.children].indexOf(el);
-            };
+    // define margins
+    let margin = ({ top: 30, right: 30, bottom: 30, left: 30 })
 
-            let activateTabsContent = function (tab) {
-                tabsContent[getIndex(tab)].classList.add("is-active");
-            };
+    // get height and width of parent div at load time
+    const width = document.getElementById("menu-div").clientWidth * 0.65
+    const height = Math.ceil(width / 2)
 
-            tabs.forEach(function (tab) {
-                tab.addEventListener("click", function () {
-                deactivateAllTabs();
-                hideTabsContent();
-                tab.classList.add("is-active");
-                activateTabsContent(tab);
-                });
-            })
+    // parse and group data
+    const data = await d3.csv("cv.csv")
+    const locations = d3.group(data, d => d.location)
 
-            tabs[0].click();
-            })();
-      }
-  </script>
+    // unique locations
+    let countries = new Set()
+    data.forEach(d => countries.add(d.country))
+    const country = Array.from(countries)
 
-  <!-- d3 js for mapped timeline -->
-  <script crossorigin="anonymous">
-      async function chartTimeline() {
+    // we'll allow float for dates to express monthly resolution, 
+    // but format it out for display
+    let formatDate = d => `${Math.trunc(d)}`
 
-        // define margins
-        let margin = ({top: 30, right: 30, bottom: 30, left: 30})
+    let y = d3.scaleBand()
+      .domain(country)
+      .range([0, height - margin.bottom - margin.top])
+      .padding(0.2)
 
-        // get height and width of parent div at load time
-        const width = document.getElementById("menu-div").clientWidth * 0.65
-        const height = Math.ceil(width / 2)
-        
-        // parse and group data
-        const data = await d3.csv("cv.csv")
-        const locations = d3.group(data, d=>d.location)
-        
-        // unique locations
-        let countries = new Set()
-        data.forEach(d => countries.add(d.country))
-        const country = Array.from(countries)
-        
-        // we'll allow float for dates to express monthly resolution, 
-        // but format it out for display
-        let formatDate = d=> `${Math.trunc(d)}`
+    let x = d3.scaleLinear()
+      .domain([d3.min(data, d => d.start), d3.max(data, d => d.end)])
+      .range([0, width - margin.left - margin.right])
 
-        let y= d3.scaleBand()
-                    .domain(country)
-                    .range([0,height - margin.bottom - margin.top])
-                    .padding(0.2)
-
-        let x = d3.scaleLinear()
-                    .domain([d3.min(data, d => d.start), d3.max(data, d => d.end)])
-                    .range([0, width - margin.left - margin.right])
-
-        // funcs for creating tooltips
-        function getTooltipContent(d) {
-            return`<b>${d.activity}</b>
+    // funcs for creating tooltips
+    function getTooltipContent(d) {
+      return `<b>${d.activity}</b>
                     <br/>
                     <b style="color:${d => d.color.darker()}">${d.location}</b>
                     <br/>
@@ -473,121 +499,121 @@
                     </br>
                     ${d.description}
                     `
-        }
+    }
 
-        function createTooltip(el) {
-             el.style("position", "absolute")
-                    .style("pointer-events", "none")
-                    .style("top", 0)
-                    .style("opacity", 0)
-                    .style("background", "white")
-                    .style("border-radius", "5px")
-                    .style("box-shadow", "0 0 10px rgba(0,0,0,.25)")
-                    .style("padding", "10px")
-                    .style("line-height", "1.3")
-                    .style("font", "11px sans-serif")
-                    .attr("class", "tooltip");
-        }
+    function createTooltip(el) {
+      el.style("position", "absolute")
+        .style("pointer-events", "none")
+        .style("top", 0)
+        .style("opacity", 0)
+        .style("background", "white")
+        .style("border-radius", "5px")
+        .style("box-shadow", "0 0 10px rgba(0,0,0,.25)")
+        .style("padding", "10px")
+        .style("line-height", "1.3")
+        .style("font", "11px sans-serif")
+        .attr("class", "tooltip");
+    }
 
-        function getRect(d) {
-                    const el = d3.select(this);
-                    const sx = x(Number(d.start));
-                    const w = x(Number(d.end)) - x(Number(d.start));
+    function getRect(d) {
+      const el = d3.select(this);
+      const sx = x(Number(d.start));
+      const w = x(Number(d.end)) - x(Number(d.start));
 
-                    el.style("cursor", "pointer")
+      el.style("cursor", "pointer")
 
-                    el.append("rect")
-                      .attr("x", sx)
-                      .attr("height", 45)
-                      .attr("width", w)
-                      .attr("fill", d.color)
-                      .attr("rx", "3")
-                      .attr("class", "timeline-rect");
+      el.append("rect")
+        .attr("x", sx)
+        .attr("height", 45)
+        .attr("width", w)
+        .attr("fill", d.color)
+        .attr("rx", "3")
+        .attr("class", "timeline-rect");
 
-                    if(w > 35){
-                    el.append("text")
-                      .text(d.short_label)
-                      .attr("x", sx + w/2)
-                      .attr("y", 20.5)
-                      .attr("fill", "black")
-                      .style("font-size", "10")
-                      .style("text-anchor", "middle")
-                      .style("dominant-baseline", "hanging");
-                    }
-        }
+      if (w > 35) {
+        el.append("text")
+          .text(d.short_label)
+          .attr("x", sx + w / 2)
+          .attr("y", 20.5)
+          .attr("fill", "black")
+          .style("font-size", "10")
+          .style("text-anchor", "middle")
+          .style("dominant-baseline", "hanging");
+      }
+    }
 
-        let axisTop = d3.axisTop()
-                        .scale(x)
-                        .tickFormat(formatDate)
-                        .tickPadding(2);
-        
-        let axisBottom = d3.axisBottom()
-                        .scale(x)
-                        .tickFormat(formatDate)
-                        .tickPadding(2);
+    let axisTop = d3.axisTop()
+      .scale(x)
+      .tickFormat(formatDate)
+      .tickPadding(2);
+
+    let axisBottom = d3.axisBottom()
+      .scale(x)
+      .tickFormat(formatDate)
+      .tickPadding(2);
 
 
-    
-let filteredData = data.sort((a,b)=>  a.start-b.start);
 
-  filteredData.forEach(d => d.color = d3.color(d.color_code))
+    let filteredData = data.sort((a, b) => a.start - b.start);
+
+    filteredData.forEach(d => d.color = d3.color(d.color_code))
 
     const parent = document.getElementById("timeline-parent")
     const svg = d3.select("#timeline");
 
     svg.attr("width", width).attr("height", height)
 
-    const g = svg.append("g").attr("transform", (d,i)=>`translate(${margin.left} ${margin.top})`);
+    const g = svg.append("g").attr("transform", (d, i) => `translate(${margin.left} ${margin.top})`);
 
     const groups = g
-    .selectAll("g")
-    .data(filteredData)
-    .enter()
-    .append("g")
-    .attr("class", "act")
+      .selectAll("g")
+      .data(filteredData)
+      .enter()
+      .append("g")
+      .attr("class", "act")
 
 
     const tooltip = d3.select(document.createElement("div")).call(createTooltip);
 
-    const line = svg.append("line").attr("y1", margin.top-10).attr("y2", height-margin.bottom).attr("stroke", "rgba(0,0,0,0.2)").style("pointer-events","none");
+    const line = svg.append("line").attr("y1", margin.top - 10).attr("y2", height - margin.bottom).attr("stroke", "rgba(0,0,0,0.2)").style("pointer-events", "none");
 
-    groups.attr("transform", (d)=>`translate(0 ${y(d.country)})`)
+    groups.attr("transform", (d) => `translate(0 ${y(d.country)})`)
 
     // draw bars
     groups
       .each(getRect)
       .on("mouseover", (event, d) => {
-          d3.select(this.rect).attr("fill", d => d.color.darker())
+        d3.select(this.rect).attr("fill", d => d.color.darker())
 
-          tooltip
-        .style("opacity", 1)
-        .html(getTooltipContent(d))
+        tooltip
+          .style("opacity", 1)
+          .html(getTooltipContent(d))
       })
       .on("mouseleave", (event, d) => {
-          d3.select(this.rect).attr("fill", d => d.color)
+        d3.select(this.rect).attr("fill", d => d.color)
 
-          tooltip
+        tooltip
           .style("opacity", 0)
       })
 
     svg
       .append("g")
-      .attr("transform", (d,i)=>`translate(${margin.left} ${margin.top-10})`)
+      .attr("transform", (d, i) => `translate(${margin.left} ${margin.top - 10})`)
       .call(axisTop)
 
     svg
       .append("g")
-      .attr("transform", (d,i)=>`translate(${margin.left} ${height-margin.bottom})`)
+      .attr("transform", (d, i) => `translate(${margin.left} ${height - margin.bottom})`)
       .call(axisBottom)
 
 
 
-    svg.on("mousemove", function(d) {
+    svg.on("mousemove", function (d) {
 
-      let [x,y] = d3.pointer(d);
+      let [x, y] = d3.pointer(d);
       line.attr("transform", `translate(${x} 0)`);
-      y +=20;
-      if(x>width/2) x-= 100;
+      y += 20;
+      if (x > width / 2) x -= 100;
 
       tooltip
         .style("left", x + "px")
@@ -597,252 +623,253 @@ let filteredData = data.sort((a,b)=>  a.start-b.start);
     parent.appendChild(svg.node());
     parent.appendChild(tooltip.node());
     parent.groups = groups;
-       
-      }
-      window.onload = chartTimeline();
-  </script>
 
-  <!-- d3 js for animated skill tree -->
-  <script crossorigin="anonymous">
-      async function chartSkill() {
-
-            // grab data for the graph
-            const data = await d3.json("skill.json")
-
-            // set margins
-            const margin = ({top: 10, right: 120, bottom: 10, left: 40})
-            
-            // width based on parent element at load time
-            const width = document.getElementById("menu-div").clientWidth * 0.65
-            
-            // 2 branches
-            const dy = width / 2.95
-
-            // vertical space between nodes
-            const dx = 25
-            
-            // define node size
-            const tree = d3.tree().nodeSize([dx, dy])
-
-            // tree structure
-            const diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x)
-            const root = d3.hierarchy(data);
-            const HideOnLoad = ["Web", "ML/AI", "Other"]
-            root.x0 = dy / 2;
-            root.y0 = 0;
-            root.descendants().forEach((d, i) => {
-                        d.id = i;
-                        d._children = d.children;
-                        if (HideOnLoad.indexOf(d.data.name) != -1) d.children = null;
-                            });
-
-                            const svg = d3.select("#skill-tree")
-                                .attr("viewBox", [-margin.left, -margin.top, width, dx])
-                                .style("font", "14px sans-serif")
-                                .style("user-select", "none");
-
-                            const gLink = svg.append("g")
-                                .attr("fill", "none")
-                                .attr("stroke", "#555")
-                                .attr("stroke-opacity", 0.4)
-                                .attr("stroke-width", 1.5);
-
-                            const gNode = svg.append("g")
-                                .attr("cursor", "pointer")
-                                .attr("pointer-events", "all");
-
-                            function update(source) {
-                                const duration = d3.event && d3.event.altKey ? 250 : 175;
-                                const nodes = root.descendants().reverse();
-                                const links = root.links();
-
-                                // Compute the new tree layout.
-                                tree(root);
-
-                                let left = root;
-                                let right = root;
-                                root.eachBefore(node => {
-                                if (node.x < left.x) left = node;
-                                if (node.x > right.x) right = node;
-                                });
-
-                                const height = right.x - left.x + margin.top + margin.bottom;
-
-                                const transition = svg.transition()
-                                    .duration(duration)
-                                    .attr("viewBox", [-margin.left, left.x - margin.top, width, height])
-                                    .tween("resize", window.ResizeObserver ? null : () => () => svg.dispatch("toggle"));
-
-                                // Update the nodes…
-                                const node = gNode.selectAll("g")
-                                .data(nodes, d => d.id);
-
-                                // Enter any new nodes at the parent's previous position.
-                                const nodeEnter = node.enter().append("g")
-                                    .attr("transform", d => `translate(${source.y0},${source.x0})`)
-                                    .attr("fill-opacity", 0)
-                                    .attr("stroke-opacity", 0)
-                                    .on("click", (event, d) => {
-                                    d.children = d.children ? null : d._children;
-                                    update(d);
-                                    });
-
-                                
-
-                                nodeEnter.append("polygon")
-                                          .attr("points", d => d.data.points)
-                                          // .attr("fill",  d => d.data.color_code)
-                                          .attr("stroke-width", 10);
-
-                                nodeEnter.append("rect")
-                                          .attr("x", -5)
-                                          .attr("y", -5)
-                                          .attr("width", 10)
-                                          .attr("height", 10)
-                                          .style("fill", d => d.data.color_code);
-                                    
-                                
-
-                                nodeEnter.append("text")
-                                    .attr("dy", "0.31em")
-                                    .attr("x", d => d._children ? -6 : 6)
-                                    .attr("text-anchor", d => d._children ? "end" : "start")
-                                    .text(d => d.data.name)
-                                    .attr("class", d => d.data.class)
-                                    .on("mouseover", (event, d) => {
-                                      d3.selectAll(d.data.projects_selector).attr("style", "background-color: #48c78e;");
-                                    })
-                                    .on("mouseleave", (event, d) => {
-                                      d3.selectAll(d.data.projects_selector).attr("style", "background-color: ;")
-                                    })
-                                    .clone(true).lower()
-                                    .attr("stroke-linejoin", "round")
-                                    .attr("stroke-width", 3)
-                                    .attr("stroke", "white");
-
-                                // Transition nodes to their new position.
-                                const nodeUpdate = node.merge(nodeEnter).transition(transition)
-                                    .attr("transform", d => `translate(${d.y},${d.x})`)
-                                    .attr("fill-opacity", 1)
-                                    .attr("stroke-opacity", 1);
-
-                                // Transition exiting nodes to the parent's new position.
-                                const nodeExit = node.exit().transition(transition).remove()
-                                    .attr("transform", d => `translate(${source.y},${source.x})`)
-                                    .attr("fill-opacity", 0)
-                                    .attr("stroke-opacity", 0);
-
-                                // Update the links…
-                                const link = gLink.selectAll("path")
-                                .data(links, d => d.target.id);
-
-                                // Enter any new links at the parent's previous position.
-                                const linkEnter = link.enter().append("path")
-                                    .attr("d", d => {
-                                    const o = {x: source.x0, y: source.y0};
-                                    return diagonal({source: o, target: o});
-                                    });
-
-                                // Transition links to their new position.
-                                link.merge(linkEnter).transition(transition)
-                                    .attr("d", diagonal);
-
-                                // Transition exiting nodes to the parent's new position.
-                                link.exit().transition(transition).remove()
-                                    .attr("d", d => {
-                                    const o = {x: source.x, y: source.y};
-                                    return diagonal({source: o, target: o});
-                                    });
-
-                                // Stash the old positions for transition.
-                                root.eachBefore(d => {
-                                d.x0 = d.x;
-                                d.y0 = d.y;
-                                });
-                            }
-
-                            update(root);
-
-                            function createLegendPoint (color, text, x) {
-                              legend = d3.select("#legend");
-
-                              let lPoint = legend.append("g");
-
-                              lPoint.append("rect")
-                                    .attr("x", x)
-                                    .attr("y", 5)
-                                          .attr("width", 10)
-                                          .attr("height", 10)
-                                    .style("fill", color);
-
-                              lPoint.append("text")
-                                    .attr("x", x + 20)
-                                    .attr("y", 10)
-                                    .text(text)
-                                    .style("font-size", "12px")
-                                    .attr("alignment-baseline", "middle");
-                            }
-
-                            // "#b30000", "#7c1158", "#4421af", "#1a53ff", "#0d88e6" - new scheme
-                            // "#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5"
-
-                            createLegendPoint("#e60049", "Python", 10)
-                            createLegendPoint("#0bb4ff", "Javascript", 100)
-                            createLegendPoint("#50e991", "Low/No-code", 200)
-                            createLegendPoint("#e6d800", "SQL", 320)
-                            createLegendPoint("#9b19f5", "CLI/Service", 390)
-
-                            return svg.node();
-                            }
-      
-      window.onload = chartSkill()
-  </script>
-
-  <!-- modal buttons -->
-  <script>
-      document.addEventListener('DOMContentLoaded', () => {
-  // Functions to open and close a modal
-  function openModal($el) {
-    $el.classList.add('is-active');
   }
+  window.onload = chartTimeline();
+</script>
 
-  function closeModal($el) {
-    $el.classList.remove('is-active');
-  }
+<!-- d3 js for animated skill tree -->
+<script crossorigin="anonymous">
+  async function chartSkill() {
 
-  function closeAllModals() {
-    (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-      closeModal($modal);
+    // grab data for the graph
+    const data = await d3.json("skill.json")
+
+    // set margins
+    const margin = ({ top: 10, right: 120, bottom: 10, left: 40 })
+
+    // width based on parent element at load time
+    const width = document.getElementById("menu-div").clientWidth * 0.65
+
+    // 2 branches
+    const dy = width / 2.95
+
+    // vertical space between nodes
+    const dx = 25
+
+    // define node size
+    const tree = d3.tree().nodeSize([dx, dy])
+
+    // tree structure
+    const diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x)
+    const root = d3.hierarchy(data);
+    const HideOnLoad = ["Web", "ML/AI", "Other"]
+    root.x0 = dy / 2;
+    root.y0 = 0;
+    root.descendants().forEach((d, i) => {
+      d.id = i;
+      d._children = d.children;
+      if (HideOnLoad.indexOf(d.data.name) != -1) d.children = null;
     });
-  }
 
-  // Add a click event on buttons to open a specific modal
-  (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-    const modal = $trigger.dataset.target;
-    const $target = document.getElementById(modal);
+    const svg = d3.select("#skill-tree")
+      .attr("viewBox", [-margin.left, -margin.top, width, dx])
+      .style("font", "14px sans-serif")
+      .style("user-select", "none");
 
-    $trigger.addEventListener('click', () => {
-      openModal($target);
-    });
-  });
+    const gLink = svg.append("g")
+      .attr("fill", "none")
+      .attr("stroke", "#555")
+      .attr("stroke-opacity", 0.4)
+      .attr("stroke-width", 1.5);
 
-  // Add a click event on various child elements to close the parent modal
-  (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-    const $target = $close.closest('.modal');
+    const gNode = svg.append("g")
+      .attr("cursor", "pointer")
+      .attr("pointer-events", "all");
 
-    $close.addEventListener('click', () => {
-      closeModal($target);
-    });
-  });
+    function update(source) {
+      const duration = d3.event && d3.event.altKey ? 250 : 175;
+      const nodes = root.descendants().reverse();
+      const links = root.links();
 
-  // Add a keyboard event to close all modals
-  document.addEventListener('keydown', (event) => {
-    const e = event || window.event;
+      // Compute the new tree layout.
+      tree(root);
 
-    if (e.keyCode === 27) { // Escape key
-      closeAllModals();
+      let left = root;
+      let right = root;
+      root.eachBefore(node => {
+        if (node.x < left.x) left = node;
+        if (node.x > right.x) right = node;
+      });
+
+      const height = right.x - left.x + margin.top + margin.bottom;
+
+      const transition = svg.transition()
+        .duration(duration)
+        .attr("viewBox", [-margin.left, left.x - margin.top, width, height])
+        .tween("resize", window.ResizeObserver ? null : () => () => svg.dispatch("toggle"));
+
+      // Update the nodes…
+      const node = gNode.selectAll("g")
+        .data(nodes, d => d.id);
+
+      // Enter any new nodes at the parent's previous position.
+      const nodeEnter = node.enter().append("g")
+        .attr("transform", d => `translate(${source.y0},${source.x0})`)
+        .attr("fill-opacity", 0)
+        .attr("stroke-opacity", 0)
+        .on("click", (event, d) => {
+          d.children = d.children ? null : d._children;
+          update(d);
+        });
+
+
+
+      nodeEnter.append("polygon")
+        .attr("points", d => d.data.points)
+        // .attr("fill",  d => d.data.color_code)
+        .attr("stroke-width", 10);
+
+      nodeEnter.append("rect")
+        .attr("x", -5)
+        .attr("y", -5)
+        .attr("width", 10)
+        .attr("height", 10)
+        .style("fill", d => d.data.color_code);
+
+
+
+      nodeEnter.append("text")
+        .attr("dy", "0.31em")
+        .attr("x", d => d._children ? -6 : 6)
+        .attr("text-anchor", d => d._children ? "end" : "start")
+        .text(d => d.data.name)
+        .attr("class", d => d.data.class)
+        .on("mouseover", (event, d) => {
+          d3.selectAll(d.data.projects_selector).attr("style", "background-color: #48c78e;");
+        })
+        .on("mouseleave", (event, d) => {
+          d3.selectAll(d.data.projects_selector).attr("style", "background-color: ;")
+        })
+        .clone(true).lower()
+        .attr("stroke-linejoin", "round")
+        .attr("stroke-width", 3)
+        .attr("stroke", "white");
+
+      // Transition nodes to their new position.
+      const nodeUpdate = node.merge(nodeEnter).transition(transition)
+        .attr("transform", d => `translate(${d.y},${d.x})`)
+        .attr("fill-opacity", 1)
+        .attr("stroke-opacity", 1);
+
+      // Transition exiting nodes to the parent's new position.
+      const nodeExit = node.exit().transition(transition).remove()
+        .attr("transform", d => `translate(${source.y},${source.x})`)
+        .attr("fill-opacity", 0)
+        .attr("stroke-opacity", 0);
+
+      // Update the links…
+      const link = gLink.selectAll("path")
+        .data(links, d => d.target.id);
+
+      // Enter any new links at the parent's previous position.
+      const linkEnter = link.enter().append("path")
+        .attr("d", d => {
+          const o = { x: source.x0, y: source.y0 };
+          return diagonal({ source: o, target: o });
+        });
+
+      // Transition links to their new position.
+      link.merge(linkEnter).transition(transition)
+        .attr("d", diagonal);
+
+      // Transition exiting nodes to the parent's new position.
+      link.exit().transition(transition).remove()
+        .attr("d", d => {
+          const o = { x: source.x, y: source.y };
+          return diagonal({ source: o, target: o });
+        });
+
+      // Stash the old positions for transition.
+      root.eachBefore(d => {
+        d.x0 = d.x;
+        d.y0 = d.y;
+      });
     }
+
+    update(root);
+
+    function createLegendPoint(color, text, x) {
+      legend = d3.select("#legend");
+
+      let lPoint = legend.append("g");
+
+      lPoint.append("rect")
+        .attr("x", x)
+        .attr("y", 5)
+        .attr("width", 10)
+        .attr("height", 10)
+        .style("fill", color);
+
+      lPoint.append("text")
+        .attr("x", x + 20)
+        .attr("y", 10)
+        .text(text)
+        .style("font-size", "12px")
+        .attr("alignment-baseline", "middle");
+    }
+
+    // "#b30000", "#7c1158", "#4421af", "#1a53ff", "#0d88e6" - new scheme
+    // "#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5"
+
+    createLegendPoint("#e60049", "Python", 10)
+    createLegendPoint("#0bb4ff", "Javascript", 100)
+    createLegendPoint("#50e991", "Low/No-code", 200)
+    createLegendPoint("#e6d800", "SQL", 320)
+    createLegendPoint("#9b19f5", "CLI/Service", 390)
+
+    return svg.node();
+  }
+
+  window.onload = chartSkill()
+</script>
+
+<!-- modal buttons -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Functions to open and close a modal
+    function openModal($el) {
+      $el.classList.add('is-active');
+    }
+
+    function closeModal($el) {
+      $el.classList.remove('is-active');
+    }
+
+    function closeAllModals() {
+      (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+        closeModal($modal);
+      });
+    }
+
+    // Add a click event on buttons to open a specific modal
+    (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+      const modal = $trigger.dataset.target;
+      const $target = document.getElementById(modal);
+
+      $trigger.addEventListener('click', () => {
+        openModal($target);
+      });
+    });
+
+    // Add a click event on various child elements to close the parent modal
+    (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+      const $target = $close.closest('.modal');
+
+      $close.addEventListener('click', () => {
+        closeModal($target);
+      });
+    });
+
+    // Add a keyboard event to close all modals
+    document.addEventListener('keydown', (event) => {
+      const e = event || window.event;
+
+      if (e.keyCode === 27) { // Escape key
+        closeAllModals();
+      }
+    });
   });
-});
-  </script>
+</script>
+
 </html>
