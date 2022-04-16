@@ -24,7 +24,7 @@
         #main-img {
             max-width: 300px;
             object-fit: "cover";
-            filter: sepia(0.80);
+            filter: contrast(130%);
         }
 
         #menu-div {
@@ -124,11 +124,25 @@
                                 <div>
                                   <section class="tab-content">
                                       <div class="content">
+                                        <div class="columns is-vcentered">
+                                          <div class="column">
+                                            <figure>
+                                            <img id="about-img" src="paper.jpg" alt="Maybe this is better than adding to a stack of paper"/>
+                                            <figcaption style="font-size: 9px;">Photo by <a href="https://unsplash.com/@brandi1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brandi Redd</a> on <a href="https://unsplash.com/s/photos/papers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                                            </figcaption>
+                                          </figure>
+                                        </div>
+                                        <div class="column is-two-thirds">
+                                          <div class="content">
                                           <h2>What is this?</h2>
                                           <br></br>
                                           <h6>This is an interactive version of my resume. 
-                                              It's a bit more information dense and hopefully a bit more interesting. 
+                                              It's a bit more detailed and hopefully a bit more interesting. 
                                               Click on a tab above to have a look.</h6>
+
+                                            </div>
+                                            </div>
+                                          </div>
                                       </div>
                                   </section>
                                   <section class="tab-content" id="timeline-parent">
@@ -143,10 +157,15 @@
                                       <div class="block">
                                       <p class="is-size-6">Some projects I've worked on and the tools/frameworks I've enjoyed using.
                                         </p>
+                                      
+                                        <span class="icon js-modal-trigger" style="float: right;" data-target="modal-skill-license" id="skill-license">
+                                          <ion-icon class="is-size-4" name="information-circle-outline"></ion-icon>
+                                      </span>
+                  
                                         <br>
                                         <p class="is-size-7"><strong>Click a project</strong> for details. </p>
-                                        <p class="is-size-7"><strong>Click a node</strong> to expand/hide. </p>
-                                        <p class="is-size-7"><strong>Hover</strong> over a tool/framework label to see projects that use it. </p>
+                                        <p class="is-size-7"><strong>Click an arrow node</strong> to expand/hide. </p>
+                                        <p class="is-size-7"><strong>Hover</strong> over a tool/framework label to see which projects used it. </p>
                                       </p>
                                     </div>
                                       <div class="columns is-vcentered is-gapless">
@@ -159,6 +178,12 @@
                                               </button>
                                             </div>
                                             <div class="content">
+                                              <button class="button is-normal is-info js-modal-trigger" data-target="modal-cf" id="cf">
+                                                  Contact Flag
+                                              </button>
+                                            </div>
+                
+                                            <div class="content">
                                               <button class="button is-normal is-info js-modal-trigger" data-target="modal-bcad" id="bcad">
                                                   BC & AD
                                                 </button>
@@ -168,12 +193,8 @@
                                                   MSc Coursework
                                               </button>
                                             </div>
-                                            <div class="content">
-                                                <button class="button is-normal is-info js-modal-trigger" data-target="modal-cf" id="cf">
-                                                    Contact Flag
-                                                </button>
-                                              </div>
                                             </div>
+                                            
                                         </div>
                                         <div class="column is-four-fifths">
                                             <div class="block">
@@ -262,8 +283,8 @@
       <p class="is-size-7">
       Below are brief descriptions of substantial assignments:
         <ul>
-          <li class="is-size-7"><em>Multi-label Classification of Product Labels (TF-IDF Vectors & NB Complement)</li>
-          <li class="is-size-7"><em>Deep Recurrent Neural Network Architecture Search (multi-input hypermodel & ranking task evaluation)</em></li>
+          <li class="is-size-7"><em>Multi-label Classification of Product Labels (TF-IDF & NB complement)</li>
+          <li class="is-size-7"><em>Deep Recurrent Neural Network Architecture Search (functional hypermodels)</em></li>
           <li class="is-size-7"><em>Distributed Queries for LMS Logs Analysis (spark & interpretable modeling)</em></li>
         </ul>
       </p>
@@ -291,6 +312,46 @@
       <br>
       <p class="is-size-7"><strong>Primary Technologies: </strong>Requests, BeautifulSoup, NLTK</p>
       </p>
+    </div>
+  </div>
+
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<!-- Contact Flag modal -->
+<div id="modal-skill-license" class="modal">
+  <div class="modal-background"></div>
+
+  <div class="modal-content">
+    <div class="box">
+      <p class="subtitle">License Info</p>
+
+      <p>Adapted from a <a target="_blank" href="https://observablehq.com/@d3/collapsible-tree">collapsable tree</a> example on Observable.</p>
+
+      <br>
+
+      <p class="is-size-6"><a target="_blank" href="https://choosealicense.com/licenses/isc/">ISC License</a></p>
+
+      <br>
+
+      <p>Copyright 2018–2020 Observable, Inc.</p>
+
+      <br>
+
+      <p>Permission to use, copy, modify, and/or distribute this software for any
+      purpose with or without fee is hereby granted, provided that the above
+      copyright notice and this permission notice appear in all copies.</p>
+
+      <br>
+
+      <p>THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+      WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+      MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+      ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+      WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+      ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+      OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</p>
+      
     </div>
   </div>
 
@@ -339,7 +400,7 @@
 
   <!-- for tabbed content - adapted from: https://eiji.dev/bulma-tabs-with-content.html -->
   <script>
-      function tabbedContent() {
+      async function tabbedContent() {
             let tabsWithContent = (function () {
             let tabs = document.querySelectorAll(".tabs li");
             let tabsContent = document.querySelectorAll(".tab-content");
@@ -379,7 +440,7 @@
   </script>
 
   <!-- d3 js for mapped timeline -->
-  <script>
+  <script crossorigin="anonymous">
       async function chartTimeline() {
 
         // define margins
@@ -387,7 +448,7 @@
 
         // get height and width of parent div at load time
         const width = document.getElementById("menu-div").clientWidth * 0.65
-        const height = document.getElementById("menu-div").clientHeight * 0.65
+        const height = Math.ceil(width / 2)
         
         // parse and group data
         const data = await d3.csv("cv.csv")
@@ -551,7 +612,7 @@ let filteredData = data.sort((a,b)=>  a.start-b.start);
   </script>
 
   <!-- d3 js for animated skill tree -->
-  <script>
+  <script crossorigin="anonymous">
       async function chartSkill() {
 
             // grab data for the graph
@@ -575,7 +636,7 @@ let filteredData = data.sort((a,b)=>  a.start-b.start);
             // tree structure
             const diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x)
             const root = d3.hierarchy(data);
-            const HideOnLoad = ["Web", "Dev & Code Quality", "Other"]
+            const HideOnLoad = ["Web", "ML/AI", "Other"]
             root.x0 = dy / 2;
             root.y0 = 0;
             root.descendants().forEach((d, i) => {
@@ -600,7 +661,7 @@ let filteredData = data.sort((a,b)=>  a.start-b.start);
                                 .attr("pointer-events", "all");
 
                             function update(source) {
-                                const duration = d3.event && d3.event.altKey ? 2500 : 250;
+                                const duration = d3.event && d3.event.altKey ? 250 : 175;
                                 const nodes = root.descendants().reverse();
                                 const links = root.links();
 
