@@ -1,0 +1,33 @@
+activity,short_label,start,end,location,type,description,country,color_code
+BA Anthropology,BA Anthro,2006.9,2010.9,"Washington, USA",Education,"<ul>
+<li><em>Whitman College</em></li>
+<li><strong>Intern with Jurash archeological project</strong>, Saudi Arabia</li>
+<li>Thesis focus on historical structure and agency</li>
+</ul>",USA, #b3cbb9ff
+LCSNW Volunteer,LCSNW,2011,2011.4,"Oregon, USA",Employment,"<ul>
+<li><strong>Refugee support and citizenship exam tutor</strong>  (US DHS Grant)</li> 
+</ul>",USA, #b3cbb9ff
+US Peace Crops,US Peace Corps,2011.4,2013.8,Republic of Georgia,Employment,"<ul>
+<li><strong>Secondary education and youth development program</strong></li>
+<ul>",Republic of Georgia, #33a1fdff
+Cambridge CELTA,Cambridge CELTA,2013.8,2014.2,"Illinois, USA",Education,"<ul>
+<li>UK level 7 certificate for language education.</li>",USA, #b3cbb9ff
+EF Education First,EF Education First,2014.3,2016.6,"Java, Indonesia",Employment,"<ul>
+<li><strong>Language Instructor</strong> (2014)</li>
+<li><strong>Director of Studies</strong> (2015 - 2016)</li>
+</ul>",Indonesia,#3b3561ff
+EF Labs,EF Labs,2016.7,2017.5,"Shanghai, China",Employment,"<ul>
+<li><strong>Academic and Quality Manager</strong> for video mediated language lessons.</li>
+</ul>",China,#ddd8b8ff
+China Online Education,COE,2017.6,2018.83,"Beijing, China",Employment,"<ul>
+<li><strong>Operations and Quality Manager</strong> Beijing/Shanghai (2017 - 2018)</li>
+</ul>",China,#ddd8b8ff
+China Online Education,COE,2018.83,2021,"Remote, Switzerland",Employment,"<ul>
+<li><strong>Data Engineer</strong> Remote, Switzerland (2018 - 2020)</li>
+</ul>",Switzerland,#de541eff
+MSc Data Science & Financial Technology,MSc DS,2021.1,2022.9,"Remote, Switzerland",Education,"<ul>
+<li><em>Goldsmith's, University of London</em></li>
+<li><strong>Distinction in</strong>:</li>
+ <li><em>Mathematics and Statistics for Data Science</em></li>
+ <li><em>Mathematics of Financial Markets</em></li>
+</ul>",Switzerland,#de541eff
