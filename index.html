@@ -77,7 +77,7 @@
         <div class="block">
                 <div class="columns content-page is-vcentered is-centered" id="menu-div">
                     <div class="column">
-                        <img id="main-img" src="https://cshepley.s3.eu-central-1.amazonaws.com/assets/cover.jpg" alt="Lake Lucerne from Weggis"/>
+                        <img id="main-img" src="cover.jpg" alt="Lake Lucerne from Weggis"/>
                     </div>
                     <div class="column is-two-thirds">
                         <div class="box" style="text-align: center;">
@@ -141,7 +141,7 @@
                                   </section>
                                   <section class="tab-content">
                                       <div class="block">
-                                      <p class="is-size-6">Some projects I've worked on and the Tools/frameworks I've enjoyed using.
+                                      <p class="is-size-6">Some projects I've worked on and the tools/frameworks I've enjoyed using.
                                         </p>
                                         <br>
                                         <p class="is-size-7"><strong>Click a project</strong> for details. </p>
@@ -169,8 +169,8 @@
                                               </button>
                                             </div>
                                             <div class="content">
-                                                <button class="button is-normal is-info js-modal-trigger" data-target="modal-profile" id="Profile">
-                                                    This page
+                                                <button class="button is-normal is-info js-modal-trigger" data-target="modal-cf" id="cf">
+                                                    Contact Flag
                                                 </button>
                                               </div>
                                             </div>
@@ -208,16 +208,16 @@
         
         <!-- Your content -->
         <p class="is-size-7"><strong>Problem statement: </strong>Infrastructure is needed for implementing our quality monitoring
-          process that allows them to be done more effectively with also increasing efficiently and transparency.</p>
+          processes that allows them to be followed more effectively while also increasing efficiently and transparency.</p>
         <br>
-        <p class="is-size-7"><strong>Solution: </strong>ETL pipelines to read, filter, and preprocess data from primary platform Hive backend
+        <p class="is-size-7"><strong>Solution: </strong>Created ETL pipelines to read, filter, and preprocess data from primary platform Hive backend
         and write to an isolated RDB which serves as backend for a web application. The UI for this application allows for role-based
         reporting and casework assignment, casework processing, while providing access to modular communication template snippets 
         integrated with a third-party API facilitating one-way email communication with a custom domain.</p>
         <br>
         <p class="is-size-7"><strong>Primary Technologies: </strong>Django, Bootstrap, Postgresql, Airflow</p>
         <br>
-        <p class="is-size-7"><strong>Code Sample: </strong>A <a href="#">reporting query</a> run to provide formatted table for analysts to
+        <p class="is-size-7"><strong>Code Sample: </strong>A <a href="https://github.com/sheplecjs/samples">reporting query</a> run to provide formatted table for analysts to
         build custom dashboards for KPI monitoring.</p>
       </div>
 
@@ -235,17 +235,17 @@
         <p class="subtitle">Behavior Classification & Anomaly Detection</p>
         
         <!-- Your content -->
-        <p class="is-size-7"><strong>Problem statement: </strong>With 40,000 + hours of services delivered per month, product volume is
+        <p class="is-size-7"><strong>Problem statement: </strong>With 40,000+ hours of services delivered per month, product volume is
           too large to monitor for adherence to quality standards. A system is needed that helps us allocate our quality control resources
           more precisely where it is needed and to achieve specific and measurable impact.</p>
         <br>
-        <p class="is-size-7"><strong>Solution: </strong>A highly scalable workflow to scan video to generate features usable by classification
+        <p class="is-size-7"><strong>Solution: </strong>Built a highly scalable workflow to scan video to extract features usable by classification
           models and create composite images that are useful both for rapid diagnostic review by humans, and further feature extraction for anomaly
           detection - namely pixel color intensity indicating platform tool use during the session.</p>
         <br>
         <p class="is-size-7"><strong>Primary Technologies: </strong>OpenCV python, Scikit-learn, AWS EC2, AWS S3, Postgresql</p>
         <br>
-        <p class="is-size-7"><strong>Code Sample: </strong>A <a href="#">script</a> run in parallel to extract features from video frames.
+        <p class="is-size-7"><strong>Code Sample: </strong>A <a href="https://github.com/sheplecjs/samples">script</a> run in parallel to extract features from video frames.
           A HAAR cascade checks a section of the frame for a face, while successive frames are layered to create a summary composite of the
           entire video. This composite is then uploaded to an S3 bucket connected to other postprocessing pipelines and linked to the QM Platform.</p>
       </div>
@@ -255,7 +255,7 @@
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-<!-- IrregEx modal -->
+<!-- MSc modal -->
 <div id="modal-msc" class="modal">
   <div class="modal-background"></div>
 
@@ -264,11 +264,11 @@
       <p>MSc Coursework</p>
       <!-- Your content -->
       <p class="is-size-7">
-      Below are descriptions of relevant assignments:
+      Below are descriptions of substantial assignments:
         <ul>
           <li class="is-size-7"><em>Multi-label Classification of Product Labels (TF-IDF Vectors & NB Complement)</li>
-          <li class="is-size-7"><em>Deep Recurrent Neural Network Architecture Search (Pre-trained word embeddings & MSE loss)</em></li>
-          <li class="is-size-7"></li>
+          <li class="is-size-7"><em>Deep Recurrent Neural Network Architecture Search (multi-input hypermodels & ranking task evaluation)</em></li>
+          <li class="is-size-7"><em></em></li>
         </ul>
       </p>
     </div>
@@ -277,18 +277,23 @@
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
 
-<!-- Profile modal -->
-<!-- HyperGene modal -->
-<div id="modal-profile" class="modal">
+<!-- Contact Flag modal -->
+<div id="modal-cf" class="modal">
   <div class="modal-background"></div>
 
   <div class="modal-content">
     <div class="box">
-      <p class="subtitle">Profile</p>
-      <!-- Your content -->
-      <p class="is-size-7">This site is a small one, but hopefully a brief example itself of using the right tools for the job.
-        everything is written as a single page, with Bulma CSS, D3 js, and ionicons brought in through CDNs. Data for visualizations and other static content
-        is served from an S3 bucket.
+      <p class="subtitle">Contact & Content Flagging</p>
+
+       <!-- Your content -->
+       <p class="is-size-7"><strong>Problem statement: </strong>Substantial text-based interaction occurs between our customers and service providers
+        in both real-time chat and post-service reports sent directly to customers. We would like to be able to intervene to prevent problematic interactions,
+        especially where service providers are providing personal contact details in violation of policies.</p>
+      <br>
+      <p class="is-size-7"><strong>Solution: </strong>Designed and implemented a multi-threaded program for collecting, cleaning, and aggregating text from multiple non-public 
+        api endpoints. The results are then processed by a series of keyword sieves that flag potentially problematic communications with high recall.</p>
+      <br>
+      <p class="is-size-7"><strong>Primary Technologies: </strong>Requests, BeautifulSoup, NLTK</p>
       </p>
     </div>
   </div>
@@ -389,7 +394,7 @@
         const height = document.getElementById("menu-div").clientHeight * 0.65
         
         // parse and group data
-        const data = await d3.csv("https://cshepley.s3.eu-central-1.amazonaws.com/assets/cv.csv")
+        const data = await d3.csv("cv.csv")
         const locations = d3.group(data, d=>d.location)
         
         // unique locations
@@ -554,7 +559,7 @@ let filteredData = data.sort((a,b)=>  a.start-b.start);
       async function chartSkill() {
 
             // grab data for the graph
-            const data = await d3.json("https://cshepley.s3.eu-central-1.amazonaws.com/assets/skill.json")
+            const data = await d3.json("skill.json")
 
             // set margins
             const margin = ({top: 10, right: 120, bottom: 10, left: 40})
