@@ -3,3 +3,6 @@
 
 # static assets
 assets/
+
+# python venv
+venv/
