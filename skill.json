@@ -11,7 +11,9 @@
          {"name": "NLTK", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #cf"},
          {"name": "OpenCV python", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#bcad"},
          {"name": "D3 js", "shape": "circle", "color_code": "#0bb4ff", "language": "javascript", "projects_selector": "#qm"},
-         {"name": "KNIME", "shape": "circle", "color_code": "#50e991", "language": "mixed", "projects_selector": "#qm"}
+         {"name": "KNIME", "shape": "circle", "color_code": "#50e991", "language": "mixed", "projects_selector": "#qm"},
+         {"name": "Tableau", "shape": "circle", "color_code": "#50e991", "language": "mixed", "projects_selector": "#qm, #bcad"},
+         {"name": "Google Data Studio", "shape": "circle", "color_code": "#50e991", "language": "mixed", "projects_selector": "#qm, #bcad"}
         ]
     },
 
@@ -34,7 +36,8 @@
         "children": [
             {"name": "Scikit-learn", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#bcad, #MSc"},
             {"name": "Tensorflow/Keras", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc"},
-            {"name": "Keras-tuner", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc"}
+            {"name": "Keras-tuner", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc"},
+            {"name": "Statsmodels", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc"}
                ]},
      
 
