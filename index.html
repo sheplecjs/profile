@@ -36,6 +36,11 @@
       visibility: hidden;
     }
 
+    #viz-div {
+      position: absolute;
+      visibility: hidden;
+    }
+
     /* https://eiji.dev/bulma-tabs-with-content.html */
     #tabs-with-content .tabs:not(:last-child) {
       margin-bottom: 0;
@@ -65,7 +70,11 @@
             <li id="menu-bread"><a href="#" onclick="bring_to_front('menu', 'main-img', '300px')">
                 C Shepley
               </a></li>
-            <li class="breads breads-hidden" id="about-bread"><a href="#">About</a></li>
+
+            <li class="breads breads-hidden" id="viz-bread"><a href="#">Viz</a></li>
+
+            <li class="breads breads-hidden" style="margin-left: -55px" id="about-bread"><a href="#">About</a></li>
+            
             <li class="breads breads-hidden"><a href="#">Components</a></li>
           </ul>
         </nav>
@@ -90,8 +99,21 @@
               </a>
             </div>
 
+            <!-- <div class="box" style="text-align: center;">
+              <a href="#" onclick="bring_to_front('viz', 'viz-img', '100%'); tabbedContent();">
+                <span class="icon-text">
+                  <span class="icon">
+                    <ion-icon name="bar-chart-outline"></ion-icon>
+                  </span>
+                  <span class="subtitle">
+                    <strong> Visualizations</strong>
+                  </span>
+                </span>
+              </a>
+            </div> -->
+
             <div class="box" style="text-align: center;">
-              <a href="mailto:cshepley@pm.me"">
+              <a href="mailto:cshepley@pm.me">
                                 <span class=" icon-text">
                 <span class="icon">
                   <ion-icon name="mail-outline"></ion-icon>
@@ -124,16 +146,16 @@
                       <div class="columns is-vcentered">
                         <div class="column">
                           <figure>
-                            <img id="about-img" src="cat.jpg" alt="Stay cool cat" />
-                            </figcaption>
+                            <img id="about-img" src="cat2.jpg" alt="Stay cool cats" style="max-width: 100%; height: auto;"/>
                           </figure>
                         </div>
-                        <div class="column is-two-thirds">
+                        <div class="column is-two-fifths">
                           <div class="content">
                             <h2>What is this?</h2>
-                            <br></br>
-                            <h6>This is an outline of experience and projects.
-                              Click on a tab above to have a look.</h6>
+                            <br>
+                            <h5 class="is-size-6">These are visual outlines of experience and projects. 
+                            Everything is rendered with D3.</p>
+                            <p><strong>Click on a tab above to have a look</strong>.</p>
 
                           </div>
                         </div>
@@ -144,7 +166,7 @@
                     <p class="is-size-6">Places I've been and for what.</p>
                     <br>
                     <p class="is-size-7"><strong>Hover</strong> over a role for more info.</p>
-                    </br>
+                    <br>
                     <svg id="timeline" style="width: 100%;">
                     </svg>
                   </section>
@@ -159,7 +181,15 @@
                       </span>
 
                       <br>
-                      <p class="is-size-7"><strong>Click a project</strong> for details. </p>
+                      <div style="display: table; height: 75px;">
+                      <div style="display: table-row;">
+                      <div style="vertical-align: middle; display: table-cell">
+                      <p class="is-size-7"><strong>Click a </strong><button type="button" class="button is-info is-small centered"
+                      style="position: relative; bottom: 6px;">
+                      Project</button> for details. </p>
+                      </div>
+                      </div>
+                      </div>
                       <p class="is-size-7"><strong>Click an arrow node</strong> to expand/hide. </p>
                       <p class="is-size-7"><strong>Hover</strong> over a tool/framework label to see which projects used
                         it. </p>
@@ -192,6 +222,19 @@
                               MSc Coursework
                             </button>
                           </div>
+                          <div class="content">
+                            <button type="button" class="button is-normal is-info js-modal-trigger"
+                              data-target="modal-sampqle" id="sampqle">
+                              SampQLe
+                            </button>
+                          </div>
+                          <div class="content">
+                            <button type="button" class="button is-normal is-info js-modal-trigger"
+                              data-target="modal-thesis" id="thesis">
+                              MSc Thesis
+                            </button>
+                          </div>
+                          
                         </div>
 
                       </div>
@@ -202,7 +245,6 @@
                             style="width: 32em; height: 60px; float: right; padding: 1em; border: 2px solid grey;"></svg>
                         </div>
                       </div>
-                      </svg>
                   </section>
                 </div>
               </div>
@@ -215,6 +257,60 @@
 
 
   </section>
+  <!-- MSc Thesis modal -->
+  <div id="modal-thesis" class="modal">
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+      <div class="box">
+        <p class="subtitle">A Probabilistic Attention
+            Mechanism for Forecasting
+            Financial Data with Transformers</p>
+        <p class="is-size-7"><strong>Abstract: </strong>Transformer neural network architectures have become increasingly used
+                                                      in state-of-the-art performing neural network time-series forecasting mod-
+                                                      els. An important component of modern transformers is an attention mech-
+                                                      anism that provides a means for a model to learn and encode the relative
+                                                      dependencies of elements in a sequence. This study will explore the poten-
+                                                      tial of probabilistic Signal Diffusion Mapping (SDM) as an attention mech-
+                                                      anism specifically for forecasting financial data. This implementation of the
+                                                      SDM algorithm promises, with linear asymptotic complexity, to combat the
+                                                      challenges of lag-length distortion in financial data by including the ability
+                                                      to operationalize general propositions about scedasticity while calculating
+                                                      time-varying optimal lag-length relationships.
+                                                    </p>
+        <br>
+        <p class="is-size-7"><strong>Primary Technologies: </strong>PyTorch, Tensorflow/Keras, Jupyter</p>
+        <br>
+        <!-- <p class="is-size-7"><strong>Code: </strong><a href="https://github.com/sheplecjs/sampqle">Github repo</a></p> -->
+      </div>
+
+    </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <!-- SampQLe modal -->
+  <div id="modal-sampqle" class="modal">
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+      <div class="box">
+        <p class="subtitle">SampQLe</p>
+        <p class="is-size-7"><strong>Description: </strong>An open-source framework for developing SQL scripting portfolios 
+        using a completely synthetic, muti-table database. Schemas are defined and models created using the Synthetic Data 
+        Vault library. Typical table examples are customizable, and table creation is facilitated with SQLAlchemy accepting any 
+        compatable database connection URL.</p>
+        <br>
+        <p class="is-size-7"><strong>Primary Technologies: </strong>SDV, Pandas, Sqlalchemy, Jupyter, SQL</p>
+        <br>
+        <p class="is-size-7"><strong>Code: </strong><a href="https://github.com/sheplecjs/sampqle">Github repo</a></p>
+      </div>
+
+    </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
   <!-- QM modal -->
   <div id="modal-qm" class="modal">
     <div class="modal-background"></div>
@@ -295,25 +391,34 @@
           term-frequency inverse document-frequency vectors. These are used to train cascading series of naïve bayes 
           classifiers to target the three levels of product category successively.
         </p>
-        <br>
+        <p class="is-size-7"><strong>Keywords: </strong> NB Classification, NLP, multi-label, TF-IDF.
+        <hr>
         <p class="is-size-7"><strong>Distributed Insights for LMS Logs Analysis: </strong>
-          Hypotheses about the significance of platform features and user demographics in LMS
-          logs are explored using Pyspark sql and MLlib. Analysis relies on significant filtering and binning based 
+          Hypotheses about the significance of platform features and user demographics in relation to consistent engagement 
+          are explored in LMS logs using Pyspark sql and MLlib. Analysis relies on significant filtering and binning based 
           on aggregations of timestamps, joins to demographic data, crosstabulation, as well as parameterized  
           grid search with random forest classifiers and feature importance inspection by average impurity.</p>
-        <br>
+        <p class="is-size-7"><strong>Keywords: </strong> Spark, lazy-execution, feature importance.</p>
+        <hr>
         <p class="is-size-7"><strong>Deep Recurrent Neural Network Architecture Search: </strong>
-          A publicly available dataset of sentences extracted from reviews of Amazon products tagged
-          for usefulness in purchase decision making is used to define a regression problem. A gradient descent regressor 
-          and a single-layer recurrent neural net are defined as baselines. A functional hypermodel is then defined that 
-          facilitates parameter tuning and comparison of multi-layer and multi-input neural nets that optionally take product 
-          titles as a second input. Tunned models are then compared with baselines and subjected to a custom ranking task 
-          challenge scored by Kendall's tau metric.</p>
-        <br>
+          A dataset of sentences extracted from reviews of Amazon products tagged for usefulness in purchase decision making 
+          is used to define a regression problem. An initial feed-forward model is developed to operate in a low-information
+          environment using only syntatic token presence one-hot encoded and optimized to outperform a naïve baseline. 
+          Using learned embeddings a gradient descent regressor and a single-layer recurrent neural net are defined as baselines. 
+          A functional hypermodel is then defined that facilitates parameter tuning and comparison of multi-layer and multi-input 
+          neural nets that optionally take product titles as a second input using pre-trained embeddings. Models are tuned using 
+          a Bayesian optimizer. Model performance is subjected to a custom ranking task scored by Kendall's tau metric, simulating 
+          real-world performance and differentiating where standard regressor scoring techniques do not.</p>
+        <p class="is-size-7"><strong>Keywords: </strong> Recurrent neural networks, hyperparamter otimization, NLP.</p>
+        <hr>
         <p class="is-size-7"><strong>Blockchain from Scratch: </strong>
           Implementation of blockchain mining node from scratch. Includes transaction and block verification,
-          as well as a parallelized mining function using a stratified psudo-random nonce search strategy.
-        <br>
+          as well as a parallelized mining function using a stratified random nonce search.
+          Mining is completed as part of coursework requirements on multiple platforms using between 2 and 36
+          processing tasks. A 51% attack is forensically analized and a potential mitigation strategy 
+          using anomaly detection in nonce search strategy is proposed.</p>
+        <p class="is-size-7"><strong>Keywords: </strong> Parallelization, search strategy, blockchain, crytography.</p>
+        <hr>
           <p class="is-size-7">Code samples available upon <a href="mailto:cshepley@pm.me">request</a></p>
       </div>
       
@@ -329,8 +434,6 @@
     <div class="modal-content">
       <div class="box">
         <p class="subtitle">Contact & Content Flagging</p>
-
-        <!-- Your content -->
         <p class="is-size-7"><strong>Problem statement: </strong>Substantial text-based interaction occurs between our
           customers and service providers
           in both real-time chat and post-service reports sent directly to customers. We would like to be able to
@@ -385,6 +488,39 @@
     </div>
 
     <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div class="columns content-page is-centered" id="viz-div">
+  <div class="columns">
+  <div class="column is-one-fifth">
+    <div class="field">
+    <p>Select stock</p>
+  <p class="control has-icons-left">
+    <span class="select">
+      <select id="bolliger_target" onchange="update_bollinger()">
+        <option value="pfe.csv">PFE</option>
+        <option selected value="abbv.csv">ABBV</option>
+        <option value="mrk.csv">MRK</option>
+      </select>
+    </span>
+  </p>
+</div>
+  </div>
+  <div class="column">
+     <svg id="bollinger-chart" style="width: 100%; padding: 2em;"></svg>
+  </div>
+  <div class="column is-one-fifth">
+  <div class="field">
+    <p>Select smoothing</p>
+  <p class="control has-icons-left">
+    <span class="select">
+      <select id="smoothing" onchange="update_bollinger()">
+        <option value="MA">MA(2)</option>
+        <option selected value="bollinger">Bollinger(2, 11)</option>
+      </select>
+    </span>
+  </p>
+</div>
   </div>
 
   <!-- ionicons deps -->
@@ -749,7 +885,7 @@
         .text(d => d.data.name)
         .attr("class", d => d.data.class)
         .on("mouseover", (event, d) => {
-          d3.selectAll(d.data.projects_selector).attr("style", "background-color: #48c78e;");
+          d3.selectAll(d.data.projects_selector).attr("style", "background-color: #c76748;");
         })
         .on("mouseleave", (event, d) => {
           d3.selectAll(d.data.projects_selector).attr("style", "background-color: ;")
@@ -883,6 +1019,225 @@
       }
     });
   });
+</script>
+
+<!-- d3js for bolliger band chart -->
+<script crossorigin="anonymous">
+// Copyright 2021 Observable, Inc.
+// Released under the ISC license.
+// https://observablehq.com/@d3/bollinger-bands
+async function BollingerChart(path, {
+  x = ([x]) => x, // given d in data, returns the (temporal) x-value
+  y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
+  N = 11, // number of periods for rolling mean
+  K = 2, // number of standard deviations to offset each band
+  func = "bollinger",
+  title, // for tooltip
+  curve = d3.curveLinear, // method of interpolation between points
+  marginTop = 20, // top margin, in pixels
+  marginRight = 30, // right margin, in pixels
+  marginBottom = 30, // bottom margin, in pixels
+  marginLeft = 40, // left margin, in pixels
+  width = 640, // outer width, in pixels
+  height = 400, // outer height, in pixels
+  xDomain, // [xmin, xmax]
+  xRange = [marginLeft, width - marginRight], // [left, right]
+  yDomain, // [ymin, ymax]
+  yRange = [height - marginBottom, marginTop], // [bottom, top]
+  yFormat, // a format specifier string for the y-axis
+  yLabel, // a label for the y-axis
+  colors = ["#aaa", "crimson", "darkcyan"], // color of the 4 lines
+  line_ids = ["observed", "lower", "upper"], // ids for lines
+  strokeWidth = 1.5, // width of lines, in pixels
+  strokeLinecap = "round", // stroke line cap of lines
+  strokeLinejoin = "round" // stroke line join of lines
+} = {}) {
+
+  // Load data
+  const data = await d3.csv(path)
+
+  const tParser = d3.timeParse("%Y-%m-%d")
+
+  // Compute values.
+  const X = d3.map(data, function(d) {return tParser(d.date)});
+  const Y = d3.map(data, function(d) {return Number(d.close)});
+  const bounds = [Y, ...[-K, +K].map(K => bollinger(N, K)(Y))]
+  const O = d3.map(data, d => d);
+  const I = d3.range(X.length);
+
+  // Compute default domains.
+  if (xDomain === undefined) xDomain = d3.extent(X);
+  if (yDomain === undefined) yDomain = [0, d3.max(Y)];
+
+  // Construct scales and axes.
+  const xScale = d3.scaleUtc(xDomain, xRange);
+  const yScale = d3.scaleLinear(yDomain, yRange);
+  const xAxis = d3.axisBottom(xScale).ticks(width / 80).tickSizeOuter(0);
+  const yAxis = d3.axisLeft(yScale).ticks(null, yFormat);
+
+  // Compute titles.
+  if (title === undefined) {
+    const formatDate = xScale.tickFormat(null, "%b %-d, %Y");
+    const formatValue = yScale.tickFormat(100, yFormat);
+    title = i => `${formatDate(X[i])}\nLower: ${formatValue(bounds[1][i])}\nActual: ${formatValue(Y[i])}\nUpper: ${formatValue(bounds[2][i])}`;
+  } else {
+    const O = d3.map(data, d => d);
+    const T = title;
+    title = i => T(O[i], i, data);
+  }
+
+  // Construct a line generator.
+  const line = d3.line()
+      .defined((y, i) => !isNaN(X[i]) && !isNaN(y))
+      .curve(curve)
+      .x((y, i) => xScale(X[i]))
+      .y((y, i) => yScale(y));
+
+  function bollinger(N, K) {
+    return values => {
+      let i = 0;
+      let sum = 0;
+      let sum2 = 0;
+      const Y = new Float64Array(values.length).fill(NaN);
+      for (let n = Math.min(N - 1, values.length); i < n; ++i) {
+        const value = values[i];
+        sum += value, sum2 += value ** 2;
+      }
+      for (let n = values.length; i < n; ++i) {
+        const value = values[i];
+        sum += value, sum2 += value ** 2;
+        const mean = sum / N;
+        const deviation = Math.sqrt((sum2 - sum ** 2 / N) / (N - 1));
+        Y[i] = mean + deviation * K;
+        const value0 = values[i - N + 1];
+        sum -= value0, sum2 -= value0 ** 2;
+      }
+      return Y;
+    };
+  }
+
+  const svg = d3.select("#bollinger-chart")
+
+  svg.attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [0, 0, width, height])
+      .attr("style", "max-width: 100%; height: auto; height: intrinsic; overflow: visible;")
+      .attr("font-family", "sans-serif")
+      .attr("font-size", 10)
+      .style("-webkit-tap-highlight-color", "transparent")
+      .style("overflow", "visible")
+      .on("pointerenter pointermove", pointermoved)
+      .on("pointerleave", pointerleft)
+      .on("touchstart", event => event.preventDefault());
+
+  svg.append("g")
+      .attr("transform", `translate(0,${height - marginBottom})`)
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("transform", `translate(${marginLeft},0)`)
+      .call(yAxis)
+      .call(g => g.select(".domain").remove())
+      .call(g => g.selectAll(".tick line").clone()
+          .attr("x2", width - marginLeft - marginRight)
+          .attr("stroke-opacity", 0.1))
+      .call(g => g.append("text")
+          .attr("x", -marginLeft)
+          .attr("y", 10)
+          .attr("fill", "currentColor")
+          .attr("text-anchor", "start")
+          .text(yLabel));
+
+  if (func == "bollinger") {
+    svg.append("g")
+      .attr("fill", "none")
+      .attr("stroke-width", strokeWidth)
+      .attr("stroke-linejoin", strokeLinejoin)
+      .attr("stroke-linecap", strokeLinecap)
+    .selectAll()
+    .data([Y, ...[-K, +K].map(K => bollinger(N, K)(Y))])
+    .join("path")
+      .attr("stroke", (d, i) => colors[i])
+      .attr("id", (d, i) => line_ids[i])
+      .attr("d", line);
+  } else {
+    svg.append("g")
+      .attr("fill", "none")
+      .attr("stroke-width", strokeWidth)
+      .attr("stroke-linejoin", strokeLinejoin)
+      .attr("stroke-linecap", strokeLinecap)
+    .selectAll()
+    .data([Y, ...[-K, +K].map(K => smooth(N, K)(Y))])
+    .join("path")
+      .attr("stroke", (d, i) => colors[i])
+      .attr("id", (d, i) => line_ids[i])
+      .attr("d", line);
+  }
+
+  
+
+  const tooltip = svg.append("g")
+      .style("pointer-events", "none");
+
+  function pointermoved(event) {
+    const i = d3.bisectCenter(X, xScale.invert(d3.pointer(event)[0]));
+    tooltip.style("display", null);
+    tooltip.attr("transform", `translate(${xScale(X[i])},${yScale(Y[i])})`);
+
+    const path = tooltip.selectAll("path")
+      .data([,])
+      .join("path")
+        .attr("fill", "white")
+        .attr("stroke", "black");
+
+    const text = tooltip.selectAll("text")
+      .data([,])
+      .join("text")
+      .call(text => text
+        .selectAll("tspan")
+        .data(`${title(i)}`.split(/\n/))
+        .join("tspan")
+          .attr("x", 0)
+          .attr("y", (_, i) => `${i * 1.1}em`)
+          .attr("font-weight", (_, i) => i ? null : "bold")
+          .text(d => d));
+
+    const {x, y, width: w, height: h} = text.node().getBBox();
+    text.attr("transform", `translate(${-w / 2},${15 - y})`);
+    path.attr("d", `M${-w / 2 - 10},5H-5l5,-5l5,5H${w / 2 + 10}v${h + 20}h-${w + 20}z`);
+    svg.property("value", O[i]).dispatch("input", {bubbles: true});
+  }
+
+  function pointerleft() {
+    tooltip.style("display", "none");
+    svg.node().value = null;
+    svg.dispatch("input", {bubbles: true});
+  }
+
+  return svg.node();
+}
+
+function update_bollinger() {
+  // const svg = document.getElementById("bollinger-chart")
+
+  var lines = d3.selectAll("g")
+
+  lines.remove()
+  var func = document.getElementById("smoothing").value
+  var path = document.getElementById("bolliger_target").value
+  BollingerChart(path, {
+  yLabel: "↑ Daily close ($)",
+  func: func,
+  width: 640,
+  height: 600
+});
+}
+
+window.onload = BollingerChart("abbv.csv", {
+  yLabel: "↑ Daily close ($)",
+  width: 640,
+  height: 600
+});
 </script>
 
 </html>

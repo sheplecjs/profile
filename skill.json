@@ -5,9 +5,9 @@
       "shape": "polygon",
       "points": "0,-10 10,0 0,10",
       "children": [
-         {"name": "Pandas", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #bcad, #MSc, #cf"},
-         {"name": "SQLAlchemy", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #bcad"},
-         {"name": "Matplotlib/Seaborn", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc"},
+         {"name": "Pandas", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #bcad, #MSc, #cf, #sampqle, #thesis"},
+         {"name": "SQLAlchemy", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #bcad, #sampqle"},
+         {"name": "Matplotlib/Seaborn", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #sampqle"},
          {"name": "NLTK", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #cf"},
          {"name": "OpenCV python", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#bcad"},
          {"name": "D3 js", "shape": "circle", "color_code": "#0bb4ff", "language": "javascript", "projects_selector": "#qm"},
@@ -22,7 +22,7 @@
         "shape": "polygon",
         "points": "0,-10 10,0 0,10",
           "children": [
-              {"name": "Postgresql", "shape": "circle", "color_code": "#e6d800", "language": "sql", "projects_selector": "#qm, #bcad"},
+              {"name": "Postgresql", "shape": "circle", "color_code": "#e6d800", "language": "sql", "projects_selector": "#qm, #bcad, #sampqle"},
               {"name": "Airflow", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #bcad"},
               {"name": "Spark", "shape": "circle", "color_code": "#e6d800", "language": "sql", "projects_selector": "#MSc"},
               {"name": "HDFS", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#MSc"},
@@ -35,9 +35,11 @@
         "points": "0,-10 10,0 0,10",
         "children": [
             {"name": "Scikit-learn", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#bcad, #MSc"},
-            {"name": "Tensorflow/Keras", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc"},
+            {"name": "Tensorflow/Keras", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #thesis"},
+            {"name": "PyTorch", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #thesis"},
             {"name": "Keras-tuner", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc"},
-            {"name": "Statsmodels", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc"}
+            {"name": "Statsmodels", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #thesis"},
+            {"name": "SDV", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#sampqle"}
                ]},
      
 
@@ -48,7 +50,7 @@
         "children": [
               {"name": "Django", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm"},
               {"name": "BeautifulSoup", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #cf"},
-              {"name": "Requests", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #cf"},
+              {"name": "Requests", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #cf, #thesis"},
               {"name": "HTML", "shape": "circle", "color_code": "#e60049", "language": "other", "projects_selector": "#qm, #cf"},
               {"name": "CSS/Bulma/Bootstrap", "shape": "circle", "color_code": "#e60049", "language": "other", "projects_selector": "#qm"},
               {"name": "Vanilla js", "shape": "circle", "color_code": "#0bb4ff", "language": "javascript", "projects_selector": "#qm, #cf"},
@@ -62,8 +64,9 @@
              "points": "0,-10 10,0 0,10",
              "children": [
                 {"name": "Docker", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#qm, #bcad, #MSc"},
-                {"name": "Git", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#qm, #cf, #MSc, #bcad"},
-                {"name": "Jupyter Notebooks", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#cf, #MSc"}
+                {"name": "Git", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#qm, #cf, #MSc, #bcad, #thesis, #sampqle"},
+                {"name": "Jupyter Notebooks", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#cf, #MSc, #sampqle, #thesis"},
+                {"name": "Poetry", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #sampqle, #thesis"}
              ]
          }
                ]}
