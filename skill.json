@@ -6,6 +6,7 @@
       "points": "0,-10 10,0 0,10",
       "children": [
          {"name": "Pandas", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #bcad, #MSc, #cf, #sampqle, #thesis"},
+         {"name": "Polars", "shape": "circle", "color_code": "#ff9900", "language": "rust", "projects_selector": "#collatz"},
          {"name": "SQLAlchemy", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #bcad, #sampqle"},
          {"name": "Matplotlib/Seaborn", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #sampqle"},
          {"name": "NLTK", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #cf"},
@@ -66,7 +67,8 @@
                 {"name": "Docker", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#qm, #bcad, #MSc"},
                 {"name": "Git", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#qm, #cf, #MSc, #bcad, #thesis, #sampqle"},
                 {"name": "Jupyter Notebooks", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#cf, #MSc, #sampqle, #thesis"},
-                {"name": "Poetry", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #sampqle, #thesis"}
+                {"name": "Poetry", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #sampqle, #thesis"},
+                {"name": "Cargo", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#collatz"}
              ]
          }
                ]}
