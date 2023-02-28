@@ -137,7 +137,7 @@
                   <ul>
                     <li><a>Intro</a></li>
                     <li><a>Education & Employment</a></li>
-                    <li><a>Tools & Frameworks</a></li>
+                    <li><a>Tools & Projects</a></li>
                   </ul>
                 </div>
                 <div>
@@ -230,6 +230,12 @@
                           </div>
                           <div class="content">
                             <button type="button" class="button is-normal is-info js-modal-trigger"
+                              data-target="modal-collatz" id="collatz">
+                              Collatz CLI
+                            </button>
+                          </div>
+                          <div class="content">
+                            <button type="button" class="button is-normal is-info js-modal-trigger"
                               data-target="modal-thesis" id="thesis">
                               MSc Thesis
                             </button>
@@ -242,7 +248,7 @@
                         <div class="block">
                           <svg id="skill-tree" style="width: 100%; padding: 2em;"></svg>
                           <svg id="legend"
-                            style="width: 32em; height: 60px; float: right; padding: 1em; border: 2px solid grey;"></svg>
+                            style="width: 32em; height: 75px; float: right; padding: 1em; border: 2px solid grey;"></svg>
                         </div>
                       </div>
                   </section>
@@ -279,7 +285,7 @@
                                                       time-varying optimal lag-length relationships.
                                                     </p>
         <br>
-        <p class="is-size-7"><strong>Primary Technologies: </strong>PyTorch, Tensorflow/Keras, Jupyter</p>
+        <p class="is-size-7"><strong>Primary Technologies: </strong>Python, PyTorch, Tensorflow/Keras, Jupyter</p>
         <br>
       </div>
 
@@ -299,9 +305,32 @@
         value. Databases are populated by synthedtic data generated from models of prototypical examples. Includes queries
         utilizing a variety of techniques to summarize and identify data of interest.</p>
         <br>
-        <p class="is-size-7"><strong>Primary Technologies: </strong>SDV, Pandas, Sqlalchemy, Jupyter, SQL</p>
+        <p class="is-size-7"><strong>Primary Technologies: </strong>Python, SDV, Pandas, Sqlalchemy, Jupyter, SQL</p>
         <br>
-        <p class="is-size-7"><strong>Code: </strong><a href="https://github.com/sheplecjs/sampqle">Github repo</a></p>
+        <p class="is-size-7"><strong>Code: </strong><a target=”_blank” href="https://github.com/sheplecjs/sampqle">Github repo</a></p>
+      </div>
+
+    </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <!-- Collatz CLI modal -->
+  <div id="modal-collatz" class="modal">
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+      <div class="box">
+        <p class="subtitle">Collatz CLI</p>
+        <p class="is-size-7"><strong>Description: </strong>A CLI for exploring Collatz sequences written in Rust. Also known as the 3n+1 problem, 
+        the Collatz conjecture stipulates that every positive integer can be reduced to 1 via a sequence of transformations. 
+        An even number is divided by two, and an odd number is multiplied by three and increased by one. The CLI provides functionality 
+        to assess specified numbers, random numbers, or specified ranges.
+        Th</p>
+        <br>
+        <p class="is-size-7"><strong>Primary Technologies: </strong>Rust, Polars</p>
+        <br>
+        <p class="is-size-7"><strong>Code: </strong><a target=”_blank” href="https://github.com/sheplecjs/collatz">Github repo</a></p>
       </div>
 
     </div>
@@ -329,7 +358,7 @@
           snippets in a WYSIWYG editor
           integrated with a third-party API facilitating one-way email communication.</p>
         <br>
-        <p class="is-size-7"><strong>Primary Technologies: </strong>Django, Postgresql, Airflow, Vanilla JS</p>
+        <p class="is-size-7"><strong>Primary Technologies: </strong>Python, Django, Postgresql, Airflow, Vanilla JS, Heroku, Airflow</p>
       </div>
 
     </div>
@@ -356,7 +385,7 @@
           feature extraction for anomaly
           detection - namely pixel color intensity indicating platform tool use during the session.</p>
         <br>
-        <p class="is-size-7"><strong>Primary Technologies: </strong>OpenCV python, Scikit-learn, AWS EC2, AWS S3,
+        <p class="is-size-7"><strong>Primary Technologies: </strong>Python, OpenCV, Scikit-learn, AWS EC2, AWS S3,
           Postgresql</p>
       </div>
 
@@ -406,7 +435,7 @@
           using anomaly detection in nonce search strategy is proposed.</p>
         <p class="is-size-7"><strong>Keywords: </strong> Parallelization, search strategy, blockchain, crytography.</p>
         <hr>
-          <p class="is-size-7">Code samples available <a href="https://github.com/sheplecjs/MSc-Samples">here</a></p>
+          <p class="is-size-7">Code samples: <a target=”_blank” href="https://github.com/sheplecjs/MSc-Samples">here</a></p>
       </div>
       
     </div>
@@ -432,7 +461,7 @@
           api endpoints. The results are then processed by a series of keyword sieves that flag potentially problematic
           communications with high precision.</p>
         <br>
-        <p class="is-size-7"><strong>Primary Technologies: </strong>Requests, BeautifulSoup, NLTK</p>
+        <p class="is-size-7"><strong>Primary Technologies: </strong>Python, Requests, BeautifulSoup, NLTK</p>
         </p>
       </div>
     </div>
@@ -440,7 +469,6 @@
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
 
-  <!-- Contact Flag modal -->
   <div id="modal-skill-license" class="modal">
     <div class="modal-background"></div>
 
@@ -925,21 +953,21 @@
 
     update(root);
 
-    function createLegendPoint(color, text, x) {
+    function createLegendPoint(color, text, x, y) {
       legend = d3.select("#legend");
 
       let lPoint = legend.append("g");
 
       lPoint.append("rect")
         .attr("x", x)
-        .attr("y", 5)
+        .attr("y", y)
         .attr("width", 10)
         .attr("height", 10)
         .style("fill", color);
 
       lPoint.append("text")
         .attr("x", x + 20)
-        .attr("y", 10)
+        .attr("y", y + 5)
         .text(text)
         .style("font-size", "12px")
         .attr("alignment-baseline", "middle");
@@ -948,11 +976,12 @@
     // "#b30000", "#7c1158", "#4421af", "#1a53ff", "#0d88e6" - new scheme
     // "#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5"
 
-    createLegendPoint("#e60049", "Python", 10)
-    createLegendPoint("#0bb4ff", "Javascript", 100)
-    createLegendPoint("#50e991", "Low/No-code", 200)
-    createLegendPoint("#e6d800", "SQL", 320)
-    createLegendPoint("#9b19f5", "CLI/Service", 390)
+    createLegendPoint("#e60049", "Python", 10, 5)
+    createLegendPoint("#0bb4ff", "Javascript", 100, 5)
+    createLegendPoint("#50e991", "Low/No-code", 200, 5)
+    createLegendPoint("#e6d800", "SQL", 320, 5)
+    createLegendPoint("#ff9900", "Rust", 10, 25)
+    createLegendPoint("#9b19f5", "CLI/Service", 390, 5)
 
     return svg.node();
   }
