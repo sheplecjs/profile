@@ -1,75 +1,287 @@
 {
-    "children": [
-     {
+  "children": [
+    {
       "name": "Analytics",
       "shape": "polygon",
       "points": "0,-10 10,0 0,10",
       "children": [
-         {"name": "Pandas", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #bcad, #MSc, #cf, #sampqle, #thesis"},
-         {"name": "Polars", "shape": "circle", "color_code": "#ff9900", "language": "rust", "projects_selector": "#collatz"},
-         {"name": "SQLAlchemy", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #bcad, #sampqle"},
-         {"name": "Matplotlib/Seaborn", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #sampqle"},
-         {"name": "NLTK", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #cf"},
-         {"name": "OpenCV python", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#bcad"},
-         {"name": "D3 js", "shape": "circle", "color_code": "#0bb4ff", "language": "javascript", "projects_selector": "#qm"},
-         {"name": "Tableau", "shape": "circle", "color_code": "#50e991", "language": "mixed", "projects_selector": "#qm, #bcad"},
-         {"name": "Google Data Studio", "shape": "circle", "color_code": "#50e991", "language": "mixed", "projects_selector": "#qm, #bcad"}
-        ]
+        {
+          "name": "Pandas",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#qm, #bcad, #MSc, #cf, #sampqle, #thesis"
+        },
+        {
+          "name": "Polars",
+          "shape": "circle",
+          "color_code": "#ff9900",
+          "language": "rust",
+          "projects_selector": "#collatz"
+        },
+        {
+          "name": "SQLAlchemy",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#qm, #bcad, #sampqle"
+        },
+        {
+          "name": "Matplotlib/Seaborn",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#MSc, #sampqle"
+        },
+        {
+          "name": "NLTK",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#MSc, #cf"
+        },
+        {
+          "name": "OpenCV python",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#bcad"
+        },
+        {
+          "name": "D3 js",
+          "shape": "circle",
+          "color_code": "#0bb4ff",
+          "language": "javascript",
+          "projects_selector": "#qm"
+        },
+        {
+          "name": "Tableau",
+          "shape": "circle",
+          "color_code": "#50e991",
+          "language": "mixed",
+          "projects_selector": "#qm, #bcad"
+        },
+        {
+          "name": "Google Data Studio",
+          "shape": "circle",
+          "color_code": "#50e991",
+          "language": "mixed",
+          "projects_selector": "#qm, #bcad"
+        }
+      ]
     },
 
     {
-        "name": "ETL",
-        "shape": "polygon",
-        "points": "0,-10 10,0 0,10",
-          "children": [
-              {"name": "Postgresql", "shape": "circle", "color_code": "#e6d800", "language": "sql", "projects_selector": "#qm, #bcad, #sampqle"},
-              {"name": "Airflow", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #bcad"},
-              {"name": "Spark", "shape": "circle", "color_code": "#e6d800", "language": "sql", "projects_selector": "#MSc"},
-              {"name": "HDFS", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#MSc"},
-              {"name": "KNIME", "shape": "circle", "color_code": "#50e991", "language": "mixed", "projects_selector": "#qm"},
-              {"name": "AWS Batch", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#qm"}
-          ]
-      },
+      "name": "ETL",
+      "shape": "polygon",
+      "points": "0,-10 10,0 0,10",
+      "children": [
+        {
+          "name": "Postgresql",
+          "shape": "circle",
+          "color_code": "#e6d800",
+          "language": "sql",
+          "projects_selector": "#qm, #bcad, #sampqle"
+        },
+        {
+          "name": "Airflow",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#qm, #bcad"
+        },
+        {
+          "name": "Spark",
+          "shape": "circle",
+          "color_code": "#e6d800",
+          "language": "sql",
+          "projects_selector": "#MSc"
+        },
+        {
+          "name": "HDFS",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "cli",
+          "projects_selector": "#MSc"
+        },
+        {
+          "name": "KNIME",
+          "shape": "circle",
+          "color_code": "#50e991",
+          "language": "mixed",
+          "projects_selector": "#qm"
+        },
+        {
+          "name": "AWS Batch",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "cli",
+          "projects_selector": "#qm"
+        }
+      ]
+    },
 
-    {"name": "ML/AI", 
-        "shape": "polygon",
-        "points": "0,-10 10,0 0,10",
-        "children": [
-            {"name": "Scikit-learn", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#bcad, #MSc"},
-            {"name": "Tensorflow/Keras", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #thesis"},
-            {"name": "PyTorch", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #thesis"},
-            {"name": "Keras-tuner", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc"},
-            {"name": "Statsmodels", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #thesis"},
-            {"name": "SDV", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#sampqle"}
-               ]},
-     
+    {
+      "name": "ML/AI",
+      "shape": "polygon",
+      "points": "0,-10 10,0 0,10",
+      "children": [
+        {
+          "name": "Scikit-learn",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#bcad, #MSc"
+        },
+        {
+          "name": "Tensorflow/Keras",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#MSc, #thesis"
+        },
+        {
+          "name": "PyTorch",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#MSc, #thesis"
+        },
+        {
+          "name": "Keras-tuner",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#MSc"
+        },
+        {
+          "name": "Statsmodels",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#MSc, #thesis"
+        },
+        {
+          "name": "SDV",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#sampqle"
+        }
+      ]
+    },
 
-       {
-        "name": "Web",
-        "shape": "polygon",
-        "points": "0,-10 10,0 0,10",
-        "children": [
-              {"name": "Django", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm"},
-              {"name": "BeautifulSoup", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #cf"},
-              {"name": "Requests", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#qm, #cf, #thesis, #MSc"},
-              {"name": "HTML", "shape": "circle", "color_code": "#e60049", "language": "other", "projects_selector": "#qm, #cf"},
-              {"name": "CSS/Bulma/Bootstrap", "shape": "circle", "color_code": "#e60049", "language": "other", "projects_selector": "#qm"},
-              {"name": "Vanilla js", "shape": "circle", "color_code": "#0bb4ff", "language": "javascript", "projects_selector": "#qm, #cf"},
-              {"name": "Heroku", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#qm"},
-              {"name": "AWS EC2", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#bcad, #MSc"},
-              {"name": "AWS S3/Glacier", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#qm, #bcad"}
-         ]},
-         {
-             "name": "Other",
-             "shape": "polygon",
-             "points": "0,-10 10,0 0,10",
-             "children": [
-                {"name": "Docker", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#qm, #bcad, #MSc"},
-                {"name": "Git", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#qm, #cf, #MSc, #bcad, #thesis, #sampqle, #collatz"},
-                {"name": "Jupyter Notebooks", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#cf, #MSc, #sampqle, #thesis"},
-                {"name": "Poetry", "shape": "circle", "color_code": "#e60049", "language": "python", "projects_selector": "#MSc, #sampqle, #thesis"},
-                {"name": "Cargo", "shape": "circle", "color_code": "#9b19f5", "language": "cli", "projects_selector": "#collatz"}
-             ]
-         }
-               ]}
-        
+    {
+      "name": "Web",
+      "shape": "polygon",
+      "points": "0,-10 10,0 0,10",
+      "children": [
+        {
+          "name": "Django",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#qm"
+        },
+        {
+          "name": "BeautifulSoup",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#qm, #cf"
+        },
+        {
+          "name": "Requests",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#qm, #cf, #thesis, #MSc"
+        },
+        {
+          "name": "HTML",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "other",
+          "projects_selector": "#qm, #cf"
+        },
+        {
+          "name": "CSS/Bulma/Bootstrap",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "other",
+          "projects_selector": "#qm"
+        },
+        {
+          "name": "Vanilla js",
+          "shape": "circle",
+          "color_code": "#0bb4ff",
+          "language": "javascript",
+          "projects_selector": "#qm, #cf"
+        },
+        {
+          "name": "Heroku",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "cli",
+          "projects_selector": "#qm"
+        },
+        {
+          "name": "AWS EC2",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "cli",
+          "projects_selector": "#bcad, #MSc"
+        },
+        {
+          "name": "AWS S3/Glacier",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "cli",
+          "projects_selector": "#qm, #bcad"
+        }
+      ]
+    },
+    {
+      "name": "Other",
+      "shape": "polygon",
+      "points": "0,-10 10,0 0,10",
+      "children": [
+        {
+          "name": "Docker",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "cli",
+          "projects_selector": "#qm, #bcad, #MSc"
+        },
+        {
+          "name": "Git",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "cli",
+          "projects_selector": "#qm, #cf, #MSc, #bcad, #thesis, #sampqle, #collatz"
+        },
+        {
+          "name": "Jupyter Notebooks",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#cf, #MSc, #sampqle, #thesis"
+        },
+        {
+          "name": "Poetry",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "python",
+          "projects_selector": "#MSc, #sampqle, #thesis"
+        },
+        {
+          "name": "Cargo",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "cli",
+          "projects_selector": "#collatz"
+        }
+      ]
+    }
+  ]
+}
