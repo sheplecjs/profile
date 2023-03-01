@@ -7,7 +7,7 @@
   <title>C Shepley</title>
   <style>
     #timeline {
-      background: url("travel.png");
+      background: url("static/travel.png");
       background-repeat: no-repeat;
       background-size: 100%;
       background-position: top center;
@@ -74,7 +74,7 @@
             <li class="breads breads-hidden" id="viz-bread"><a href="#">Viz</a></li>
 
             <li class="breads breads-hidden" style="margin-left: -55px" id="about-bread"><a href="#">About</a></li>
-            
+
             <li class="breads breads-hidden"><a href="#">Components</a></li>
           </ul>
         </nav>
@@ -83,7 +83,7 @@
       <div class="block">
         <div class="columns content-page is-vcentered is-centered" id="menu-div">
           <div class="column">
-            <img id="main-img" src="cover.jpg" alt="Lake Lucerne from Weggis" />
+            <img id="main-img" src="static/cover.jpg" alt="Lake Lucerne from Weggis" />
           </div>
           <div class="column is-two-thirds">
             <div class="box" style="text-align: center;">
@@ -99,29 +99,15 @@
               </a>
             </div>
 
-            <!-- <div class="box" style="text-align: center;">
-            NOT IMPLEMENTED
-              <a href="#" onclick="bring_to_front('viz', 'viz-img', '100%'); tabbedContent();">
-                <span class="icon-text">
-                  <span class="icon">
-                    <ion-icon name="bar-chart-outline"></ion-icon>
-                  </span>
-                  <span class="subtitle">
-                    <strong> Visualizations</strong>
-                  </span>
-                </span>
-              </a>
-            </div> -->
-
             <div class="box" style="text-align: center;">
               <a href="mailto:cshepley@pm.me">
-                                <span class=" icon-text">
-                <span class="icon">
-                  <ion-icon name="mail-outline"></ion-icon>
-                </span>
-                <span class="subtitle">
-                  <strong> Contact</strong>
-                </span>
+                <span class=" icon-text">
+                  <span class="icon">
+                    <ion-icon name="mail-outline"></ion-icon>
+                  </span>
+                  <span class="subtitle">
+                    <strong> Contact</strong>
+                  </span>
                 </span>
               </a>
             </div>
@@ -147,16 +133,17 @@
                       <div class="columns is-vcentered">
                         <div class="column">
                           <figure>
-                            <img id="about-img" src="cat2.jpg" alt="Stay cool cats" style="max-width: 100%; height: auto;"/>
+                            <img id="about-img" src="static/cat2.jpg" alt="Stay cool cats"
+                              style="max-width: 100%; height: auto;" />
                           </figure>
                         </div>
                         <div class="column is-two-fifths">
                           <div class="content">
                             <h2>What is this?</h2>
                             <br>
-                            <h5 class="is-size-6">These are visual outlines of experience and projects. 
-                            Everything is rendered with D3.</p>
-                            <p><strong>Click on a tab above to have a look</strong>.</p>
+                            <h5 class="is-size-6">These are visual outlines of experience and projects.
+                              Everything is rendered with D3.</p>
+                              <p><strong>Click on a tab above to have a look</strong>.</p>
 
                           </div>
                         </div>
@@ -183,13 +170,13 @@
 
                       <br>
                       <div style="display: table; height: 45px;">
-                      <div style="display: table-row;">
-                      <div style="vertical-align: middle; display: table-cell">
-                      <p class="is-size-7"><strong>Click a </strong><button type="button" class="button is-info is-small centered"
-                      style="position: relative; bottom: 6px;">
-                      Project</button> for details. </p>
-                      </div>
-                      </div>
+                        <div style="display: table-row;">
+                          <div style="vertical-align: middle; display: table-cell">
+                            <p class="is-size-7"><strong>Click a </strong><button type="button"
+                                class="button is-info is-small centered" style="position: relative; bottom: 6px;">
+                                Project</button> for details. </p>
+                          </div>
+                        </div>
                       </div>
                       <p class="is-size-7"><strong>Click an arrow node</strong> to expand/hide. </p>
                       <p class="is-size-7"><strong>Hover</strong> over a tool/framework label to see which projects used
@@ -241,7 +228,7 @@
                               MSc Thesis
                             </button>
                           </div>
-                          
+
                         </div>
 
                       </div>
@@ -271,20 +258,21 @@
     <div class="modal-content">
       <div class="box">
         <p class="subtitle">A Probabilistic Attention
-            Mechanism for Forecasting
-            Financial Data with Transformers</p>
-        <p class="is-size-7"><strong>Abstract: </strong>Transformer neural network architectures have become increasingly used
-                                                      in state-of-the-art performing neural network time-series forecasting mod-
-                                                      els. An important component of modern transformers is an attention mech-
-                                                      anism that provides a means for a model to learn and encode the relative
-                                                      dependencies of elements in a sequence. This study will explore the poten-
-                                                      tial of probabilistic Signal Diffusion Mapping (SDM) as an attention mech-
-                                                      anism specifically for forecasting financial data. This implementation of the
-                                                      SDM algorithm promises, with linear asymptotic complexity, to combat the
-                                                      challenges of lag-length distortion in financial data by including the ability
-                                                      to operationalize general propositions about scedasticity while calculating
-                                                      time-varying optimal lag-length relationships.
-                                                    </p>
+          Mechanism for Forecasting
+          Financial Data with Transformers</p>
+        <p class="is-size-7"><strong>Abstract: </strong>Transformer neural network architectures have become
+          increasingly used
+          in state-of-the-art performing neural network time-series forecasting mod-
+          els. An important component of modern transformers is an attention mech-
+          anism that provides a means for a model to learn and encode the relative
+          dependencies of elements in a sequence. This study will explore the poten-
+          tial of probabilistic Signal Diffusion Mapping (SDM) as an attention mech-
+          anism specifically for forecasting financial data. This implementation of the
+          SDM algorithm promises, with linear asymptotic complexity, to combat the
+          challenges of lag-length distortion in financial data by including the ability
+          to operationalize general propositions about scedasticity while calculating
+          time-varying optimal lag-length relationships.
+        </p>
         <br>
         <p class="is-size-7"><strong>Primary Technologies: </strong>Python, PyTorch, Tensorflow/Keras, Jupyter</p>
         <br>
@@ -303,12 +291,14 @@
       <div class="box">
         <p class="subtitle">SampQLe</p>
         <p class="is-size-7"><strong>Description: </strong>A portfolio of SQL scripts developing queries with analytic
-        value. Databases are populated by synthedtic data generated from models of prototypical examples. Includes queries
-        utilizing a variety of techniques to summarize and identify data of interest.</p>
+          value. Databases are populated by synthedtic data generated from models of prototypical examples. Includes
+          queries
+          utilizing a variety of techniques to summarize and identify data of interest.</p>
         <br>
         <p class="is-size-7"><strong>Primary Technologies: </strong>Python, SDV, Pandas, Sqlalchemy, Jupyter, SQL</p>
         <br>
-        <p class="is-size-7"><strong>Code: </strong><a target=”_blank” href="https://github.com/sheplecjs/sampqle">Github repo</a></p>
+        <p class="is-size-7"><strong>Code: </strong><a target=”_blank”
+            href="https://github.com/sheplecjs/sampqle">Github repo</a></p>
       </div>
 
     </div>
@@ -323,15 +313,21 @@
     <div class="modal-content">
       <div class="box">
         <p class="subtitle">Collatz CLI</p>
-        <p class="is-size-7"><strong>Description: </strong>A CLI for exploring Collatz sequences written in Rust. Also known as the 3n+1 problem, 
-        the Collatz conjecture stipulates that every positive integer can be reduced to 1 via a sequence of transformations. 
-        An even number is divided by two, and an odd number is multiplied by three and increased by one. The CLI provides functionality 
-        to assess specified numbers, random numbers, or specified ranges. This project allows for exploring Collatz sequences derived from massive integers with 
-        specified inputs, random numbers, and ranges. A persistenet history of unique solutions is alos implemented.</p>
+        <p class="is-size-7"><strong>Description: </strong>A CLI for exploring Collatz sequences written in Rust. Also
+          known as the 3n+1 problem,
+          the Collatz conjecture stipulates that every positive integer can be reduced to 1 via a sequence of
+          transformations.
+          An even number is divided by two, and an odd number is multiplied by three and increased by one. The CLI
+          provides functionality
+          to assess specified numbers, random numbers, or specified ranges. This project allows for exploring Collatz
+          sequences derived from massive integers with
+          specified inputs, random numbers, and ranges. A persistenet history of unique solutions is alos implemented.
+        </p>
         <br>
         <p class="is-size-7"><strong>Primary Technologies: </strong>Rust, Polars</p>
         <br>
-        <p class="is-size-7"><strong>Code: </strong><a target=”_blank” href="https://github.com/sheplecjs/collatz">Github repo</a></p>
+        <p class="is-size-7"><strong>Code: </strong><a target=”_blank”
+            href="https://github.com/sheplecjs/collatz">Github repo</a></p>
       </div>
 
     </div>
@@ -359,7 +355,8 @@
           snippets in a WYSIWYG editor
           integrated with a third-party API facilitating one-way email communication.</p>
         <br>
-        <p class="is-size-7"><strong>Primary Technologies: </strong>Python, Django, Postgresql, Airflow, Vanilla JS, Heroku, Airflow</p>
+        <p class="is-size-7"><strong>Primary Technologies: </strong>Python, Django, Postgresql, Airflow, Vanilla JS,
+          Heroku, Airflow</p>
       </div>
 
     </div>
@@ -404,27 +401,35 @@
         <p class="subtitle">MSc Substantial Coursework</p>
         <p class="is-size-7"><strong>Multi-label Classification of Products: </strong>
           Given a set of product descriptions and three category labels, exploratory
-          analysis is performed to inform data cleaning steps. Customized text processing is applied to produce 
-          term-frequency inverse document-frequency vectors. These are used to train cascading series of naïve bayes 
+          analysis is performed to inform data cleaning steps. Customized text processing is applied to produce
+          term-frequency inverse document-frequency vectors. These are used to train cascading series of naïve bayes
           classifiers to target the three levels of product category successively.
         </p>
         <p class="is-size-7"><strong>Keywords: </strong> NB Classification, NLP, multi-label, TF-IDF.
-        <hr>
+          <hr>
         <p class="is-size-7"><strong>Distributed Insights for LMS Logs Analysis: </strong>
-          Hypotheses about the significance of platform features and user demographics in relation to consistent engagement 
-          are explored in LMS logs using Pyspark sql and MLlib. Analysis relies on significant filtering and binning based 
-          on aggregations of timestamps, joins to demographic data, crosstabulation, as well as parameterized  
+          Hypotheses about the significance of platform features and user demographics in relation to consistent
+          engagement
+          are explored in LMS logs using Pyspark sql and MLlib. Analysis relies on significant filtering and binning
+          based
+          on aggregations of timestamps, joins to demographic data, crosstabulation, as well as parameterized
           grid search with random forest classifiers and feature importance inspection by average impurity.</p>
         <p class="is-size-7"><strong>Keywords: </strong> Spark, lazy-execution, feature importance.</p>
         <hr>
         <p class="is-size-7"><strong>Deep Neural Network Architecture Search: </strong>
-          A dataset of sentences extracted from reviews of Amazon products tagged for usefulness in purchase decision making 
-          is used to define a regression problem. An initial feed-forward model is developed to operate in a low-information
-          environment using only syntactic token presence one-hot encoded and optimized to outperform a naïve baseline. 
-          Using learned embeddings a gradient descent regressor and a single-layer recurrent neural net are defined as baselines. 
-          A functional hypermodel is then defined that facilitates parameter tuning and comparison of multi-layer and multi-input 
-          neural nets that optionally take product titles as a second input using pre-trained embeddings. Models are tuned using 
-          a Bayesian optimizer. Model performance is subjected to a custom ranking task scored by Kendall's tau metric, simulating 
+          A dataset of sentences extracted from reviews of Amazon products tagged for usefulness in purchase decision
+          making
+          is used to define a regression problem. An initial feed-forward model is developed to operate in a
+          low-information
+          environment using only syntactic token presence one-hot encoded and optimized to outperform a naïve baseline.
+          Using learned embeddings a gradient descent regressor and a single-layer recurrent neural net are defined as
+          baselines.
+          A functional hypermodel is then defined that facilitates parameter tuning and comparison of multi-layer and
+          multi-input
+          neural nets that optionally take product titles as a second input using pre-trained embeddings. Models are
+          tuned using
+          a Bayesian optimizer. Model performance is subjected to a custom ranking task scored by Kendall's tau metric,
+          simulating
           real-world performance and differentiating where standard regressor scoring techniques do not.</p>
         <p class="is-size-7"><strong>Keywords: </strong> Recurrent neural networks, hyperparamter otimization, NLP.</p>
         <hr>
@@ -432,13 +437,14 @@
           Implementation of blockchain mining node. Includes transaction and block verification,
           as well as a parallelized mining function using a stratified random nonce search.
           Mining is completed as part of coursework requirements on multiple platforms using between 2 and 36
-          processing tasks. A 51% attack is forensically analyzed and a potential mitigation strategy 
+          processing tasks. A 51% attack is forensically analyzed and a potential mitigation strategy
           using anomaly detection in nonce search strategy is proposed.</p>
         <p class="is-size-7"><strong>Keywords: </strong> Parallelization, search strategy, blockchain, crytography.</p>
         <hr>
-          <p class="is-size-7">Code samples: <a target=”_blank” href="https://github.com/sheplecjs/MSc-Samples">here</a></p>
+        <p class="is-size-7">Code samples: <a target=”_blank” href="https://github.com/sheplecjs/MSc-Samples">here</a>
+        </p>
       </div>
-      
+
     </div>
 
     <button class="modal-close is-large" aria-label="close"></button>
@@ -477,9 +483,11 @@
       <div class="box">
         <p class="subtitle">License & Notice</p>
 
-        <p>Adapted from a <a target="_blank" rel="noopener" href="https://observablehq.com/@d3/collapsible-tree">collapsable tree</a>
+        <p>Adapted from a <a target="_blank" rel="noopener"
+            href="https://observablehq.com/@d3/collapsible-tree">collapsable tree</a>
           example on Observable published
-          under the <a target="_blank" rel="noopener" href="https://choosealicense.com/licenses/isc/">ISC License</a>.</p>
+          under the <a target="_blank" rel="noopener" href="https://choosealicense.com/licenses/isc/">ISC License</a>.
+        </p>
 
         <br>
 
@@ -507,755 +515,57 @@
   </div>
 
   <div class="columns content-page is-centered" id="viz-div">
-  <div class="columns">
-  <div class="column is-one-fifth">
-    <div class="field">
-    <p>Select stock</p>
-  <p class="control has-icons-left">
-    <span class="select">
-      <select id="bolliger_target" onchange="update_bollinger()">
-        <option value="pfe.csv">PFE</option>
-        <option selected value="abbv.csv">ABBV</option>
-        <option value="mrk.csv">MRK</option>
-      </select>
-    </span>
-  </p>
-</div>
-  </div>
-  <div class="column">
-     <svg id="bollinger-chart" style="width: 100%; padding: 2em;"></svg>
-  </div>
-  <div class="column is-one-fifth">
-  <div class="field">
-    <p>Select smoothing</p>
-  <p class="control has-icons-left">
-    <span class="select">
-      <select id="smoothing" onchange="update_bollinger()">
-        <option value="MA">MA(2)</option>
-        <option selected value="bollinger">Bollinger(2, 11)</option>
-      </select>
-    </span>
-  </p>
-</div>
-  </div>
+    <div class="columns">
+      <div class="column is-one-fifth">
+        <div class="field">
+          <p>Select stock</p>
+          <p class="control has-icons-left">
+            <span class="select">
+              <select id="bolliger_target" onchange="update_bollinger()">
+                <option value="pfe.csv">PFE</option>
+                <option selected value="abbv.csv">ABBV</option>
+                <option value="mrk.csv">MRK</option>
+              </select>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <svg id="bollinger-chart" style="width: 100%; padding: 2em;"></svg>
+      </div>
+      <div class="column is-one-fifth">
+        <div class="field">
+          <p>Select smoothing</p>
+          <p class="control has-icons-left">
+            <span class="select">
+              <select id="smoothing" onchange="update_bollinger()">
+                <option value="MA">MA(2)</option>
+                <option selected value="bollinger">Bollinger(2, 11)</option>
+              </select>
+            </span>
+          </p>
+        </div>
+      </div>
 
-  <!-- ionicons deps -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <!-- ionicons deps -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
 <!-- for hiding and revealing content -->
-<script>
-  function bring_to_front(div_name, max_width) {
+<script src="js/content_hiding.js"></script>
 
-    // select all content pages
-    var allContent = document.querySelectorAll(".content-page");
-    var allCrumbs = document.querySelectorAll(".breads");
-
-    // hide and shift all content up
-    allContent.forEach(function (content) {
-      content.style.visibility = "hidden";
-      content.style.position = "absolute";
-    });
-
-    // hide any active crumbs
-    allCrumbs.forEach(function (crumb) {
-      if (!crumb.classList.contains("breads-hidden")) {
-        crumb.classList.add("breads-hidden");
-      };
-    })
-
-    // set our target content fixed and visible, then ensure the image is correctly sized and add breadcrumb
-    let targetContent = document.getElementById(div_name + "-div");
-    targetContent.style.position = "static";
-    targetContent.style.visibility = "visible";
-
-    // remove breadcrumb hiding
-    document.getElementById(div_name + "-bread").classList.remove("breads-hidden");
-
-    // configure content image
-    document.getElementById("main-img").style.objectFit = "cover";
-    document.getElementById("main-img").style.maxWidth = max_width;
-  }
-</script>
-
-<!-- for tabbed content - adapted from: https://eiji.dev/bulma-tabs-with-content.html -->
-<script>
-  async function tabbedContent() {
-    let tabsWithContent = (function () {
-      let tabs = document.querySelectorAll(".tabs li");
-      let tabsContent = document.querySelectorAll(".tab-content");
-
-      let deactivateAllTabs = function () {
-        tabs.forEach(function (tab) {
-          tab.classList.remove("is-active");
-        });
-      };
-
-      let hideTabsContent = function () {
-        tabsContent.forEach(function (tabContent) {
-          tabContent.classList.remove("is-active");
-        });
-      };
-
-      let getIndex = function (el) {
-        return [...el.parentElement.children].indexOf(el);
-      };
-
-      let activateTabsContent = function (tab) {
-        tabsContent[getIndex(tab)].classList.add("is-active");
-      };
-
-      tabs.forEach(function (tab) {
-        tab.addEventListener("click", function () {
-          deactivateAllTabs();
-          hideTabsContent();
-          tab.classList.add("is-active");
-          activateTabsContent(tab);
-        });
-      })
-
-      tabs[0].click();
-    })();
-  }
-</script>
+<!-- for tabbed content - adapted from: https://eiji.dev/bulma-tabs-with-content.html --->
+<script src="js/tabbed_content.js"></script>
 
 <!-- d3 js for mapped timeline --->
-<script crossorigin="anonymous">
-  async function chartTimeline() {
+<script src="js/mapped_timeline.js"></script>
 
-    // define margins
-    let margin = ({ top: 30, right: 30, bottom: 30, left: 30 })
-
-    // get height and width of parent div at load time
-    const width = document.getElementById("menu-div").clientWidth * 0.65
-    const height = Math.ceil(width / 2)
-
-    // parse and group data
-    const data = await d3.csv("cv.csv")
-    const locations = d3.group(data, d => d.location)
-
-    // unique locations
-    let countries = new Set()
-    data.forEach(d => countries.add(d.country))
-    const country = Array.from(countries)
-
-    // we'll allow float for dates to express monthly resolution, 
-    // but format it out for display
-    let formatDate = d => `${Math.trunc(d)}`
-
-    let y = d3.scaleBand()
-      .domain(country)
-      .range([0, height - margin.bottom - margin.top])
-      .padding(0.2)
-
-    let x = d3.scaleLinear()
-      .domain([d3.min(data, d => d.start), d3.max(data, d => d.end)])
-      .range([0, width - margin.left - margin.right])
-
-    // funcs for creating tooltips
-    function getTooltipContent(d) {
-      return `<b>${d.activity}</b>
-                    <br/>
-                    <b style="color:${d => d.color.darker()}">${d.location}</b>
-                    <br/>
-                    ${formatDate(d.start)} - ${formatDate(d.end)}
-                    </br>
-                    ${d.description}
-                    `
-    }
-
-    function createTooltip(el) {
-      el.style("position", "absolute")
-        .style("pointer-events", "none")
-        .style("top", 0)
-        .style("opacity", 0)
-        .style("background", "white")
-        .style("border-radius", "5px")
-        .style("box-shadow", "0 0 10px rgba(0,0,0,.25)")
-        .style("padding", "10px")
-        .style("line-height", "1.3")
-        .style("font", "11px sans-serif")
-        .attr("class", "tooltip");
-    }
-
-    function getRect(d) {
-      const el = d3.select(this);
-      const sx = x(Number(d.start));
-      const w = x(Number(d.end)) - x(Number(d.start));
-
-      el.style("cursor", "pointer")
-
-      el.append("rect")
-        .attr("x", sx)
-        .attr("height", 45)
-        .attr("width", w)
-        .attr("fill", d.color)
-        .attr("rx", "3")
-        .attr("class", "timeline-rect");
-
-      if (w > 35) {
-        el.append("text")
-          .text(d.short_label)
-          .attr("x", sx + w / 2)
-          .attr("y", 20.5)
-          .attr("fill", "black")
-          .style("font-size", "10")
-          .style("text-anchor", "middle")
-          .style("dominant-baseline", "hanging");
-      }
-    }
-
-    let axisTop = d3.axisTop()
-      .scale(x)
-      .tickFormat(formatDate)
-      .tickPadding(2);
-
-    let axisBottom = d3.axisBottom()
-      .scale(x)
-      .tickFormat(formatDate)
-      .tickPadding(2);
-
-
-
-    let filteredData = data.sort((a, b) => a.start - b.start);
-
-    filteredData.forEach(d => d.color = d3.color(d.color_code))
-
-    const parent = document.getElementById("timeline-parent")
-    const svg = d3.select("#timeline");
-
-    svg.attr("width", width).attr("height", height)
-
-    const g = svg.append("g").attr("transform", (d, i) => `translate(${margin.left} ${margin.top})`);
-
-    const groups = g
-      .selectAll("g")
-      .data(filteredData)
-      .enter()
-      .append("g")
-      .attr("class", "act")
-
-
-    const tooltip = d3.select(document.createElement("div")).call(createTooltip);
-
-    const line = svg.append("line").attr("y1", margin.top - 10).attr("y2", height - margin.bottom).attr("stroke", "rgba(0,0,0,0.2)").style("pointer-events", "none");
-
-    groups.attr("transform", (d) => `translate(0 ${y(d.country)})`)
-
-    // draw bars
-    groups
-      .each(getRect)
-      .on("mouseover", (event, d) => {
-        d3.select(this.rect).attr("fill", d => d.color.darker())
-
-        tooltip
-          .style("opacity", 1)
-          .html(getTooltipContent(d))
-      })
-      .on("mouseleave", (event, d) => {
-        d3.select(this.rect).attr("fill", d => d.color)
-
-        tooltip
-          .style("opacity", 0)
-      })
-
-    svg
-      .append("g")
-      .attr("transform", (d, i) => `translate(${margin.left} ${margin.top - 10})`)
-      .call(axisTop)
-
-    svg
-      .append("g")
-      .attr("transform", (d, i) => `translate(${margin.left} ${height - margin.bottom})`)
-      .call(axisBottom)
-
-
-
-    svg.on("mousemove", function (d) {
-
-      let [x, y] = d3.pointer(d);
-      line.attr("transform", `translate(${x} 0)`);
-      y += 20;
-      if (x > width / 2) x -= 100;
-
-      tooltip
-        .style("left", x + "px")
-        .style("top", y + "px")
-    })
-
-    parent.appendChild(svg.node());
-    parent.appendChild(tooltip.node());
-    parent.groups = groups;
-
-  }
-
-   window.onload = chartTimeline();
-</script>
-
-<!-- d3 js for animated skill tree -->
-<script crossorigin="anonymous">
-  async function chartSkill() {
-
-    // grab data for the graph
-    const data = await d3.json("skill.json")
-
-    // set margins
-    const margin = ({ top: 10, right: 120, bottom: 10, left: 40 })
-
-    // width based on parent element at load time
-    const width = document.getElementById("menu-div").clientWidth * 0.65
-
-    // 2 branches
-    const dy = width / 2.95
-
-    // vertical space between nodes
-    const dx = 25
-
-    // define node size
-    const tree = d3.tree().nodeSize([dx, dy])
-
-    // tree structure
-    const diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x)
-    const root = d3.hierarchy(data);
-    const HideOnLoad = ["Web", "ML/AI", "Other"]
-    root.x0 = dy / 2;
-    root.y0 = 0;
-    root.descendants().forEach((d, i) => {
-      d.id = i;
-      d._children = d.children;
-      if (HideOnLoad.indexOf(d.data.name) != -1) d.children = null;
-    });
-
-    const svg = d3.select("#skill-tree")
-      .attr("viewBox", [-margin.left, -margin.top, width, dx])
-      .style("font", "14px sans-serif")
-      .style("user-select", "none");
-
-    const gLink = svg.append("g")
-      .attr("fill", "none")
-      .attr("stroke", "#555")
-      .attr("stroke-opacity", 0.4)
-      .attr("stroke-width", 1.5);
-
-    const gNode = svg.append("g")
-      .attr("cursor", "pointer")
-      .attr("pointer-events", "all");
-
-    function update(source) {
-      const duration = d3.event && d3.event.altKey ? 250 : 175;
-      const nodes = root.descendants().reverse();
-      const links = root.links();
-
-      // Compute the new tree layout.
-      tree(root);
-
-      let left = root;
-      let right = root;
-      root.eachBefore(node => {
-        if (node.x < left.x) left = node;
-        if (node.x > right.x) right = node;
-      });
-
-      const height = right.x - left.x + margin.top + margin.bottom;
-
-      const transition = svg.transition()
-        .duration(duration)
-        .attr("viewBox", [-margin.left, left.x - margin.top, width, height])
-        .tween("resize", window.ResizeObserver ? null : () => () => svg.dispatch("toggle"));
-
-      // Update the nodes…
-      const node = gNode.selectAll("g")
-        .data(nodes, d => d.id);
-
-      // Enter any new nodes at the parent's previous position.
-      const nodeEnter = node.enter().append("g")
-        .attr("transform", d => `translate(${source.y0},${source.x0})`)
-        .attr("fill-opacity", 0)
-        .attr("stroke-opacity", 0)
-        .on("click", (event, d) => {
-          d.children = d.children ? null : d._children;
-          update(d);
-        });
-
-
-
-      nodeEnter.append("polygon")
-        .attr("points", d => d.data.points)
-        // .attr("fill",  d => d.data.color_code)
-        .attr("stroke-width", 10);
-
-      nodeEnter.append("rect")
-        .attr("x", -5)
-        .attr("y", -5)
-        .attr("width", 10)
-        .attr("height", 10)
-        .style("fill", d => d.data.color_code);
-
-
-
-      nodeEnter.append("text")
-        .attr("dy", "0.31em")
-        .attr("x", d => d._children ? -6 : 6)
-        .attr("text-anchor", d => d._children ? "end" : "start")
-        .text(d => d.data.name)
-        .attr("class", d => d.data.class)
-        .on("mouseover", (event, d) => {
-          d3.selectAll(d.data.projects_selector).attr("style", "background-color: #c76748;");
-        })
-        .on("mouseleave", (event, d) => {
-          d3.selectAll(d.data.projects_selector).attr("style", "background-color: ;")
-        })
-        .clone(true).lower()
-        .attr("stroke-linejoin", "round")
-        .attr("stroke-width", 3)
-        .attr("stroke", "white");
-
-      // Transition nodes to their new position.
-      const nodeUpdate = node.merge(nodeEnter).transition(transition)
-        .attr("transform", d => `translate(${d.y},${d.x})`)
-        .attr("fill-opacity", 1)
-        .attr("stroke-opacity", 1);
-
-      // Transition exiting nodes to the parent's new position.
-      const nodeExit = node.exit().transition(transition).remove()
-        .attr("transform", d => `translate(${source.y},${source.x})`)
-        .attr("fill-opacity", 0)
-        .attr("stroke-opacity", 0);
-
-      // Update the links…
-      const link = gLink.selectAll("path")
-        .data(links, d => d.target.id);
-
-      // Enter any new links at the parent's previous position.
-      const linkEnter = link.enter().append("path")
-        .attr("d", d => {
-          const o = { x: source.x0, y: source.y0 };
-          return diagonal({ source: o, target: o });
-        });
-
-      // Transition links to their new position.
-      link.merge(linkEnter).transition(transition)
-        .attr("d", diagonal);
-
-      // Transition exiting nodes to the parent's new position.
-      link.exit().transition(transition).remove()
-        .attr("d", d => {
-          const o = { x: source.x, y: source.y };
-          return diagonal({ source: o, target: o });
-        });
-
-      // Stash the old positions for transition.
-      root.eachBefore(d => {
-        d.x0 = d.x;
-        d.y0 = d.y;
-      });
-    }
-
-    update(root);
-
-    function createLegendPoint(color, text, x, y) {
-      legend = d3.select("#legend");
-
-      let lPoint = legend.append("g");
-
-      lPoint.append("rect")
-        .attr("x", x)
-        .attr("y", y)
-        .attr("width", 10)
-        .attr("height", 10)
-        .style("fill", color);
-
-      lPoint.append("text")
-        .attr("x", x + 20)
-        .attr("y", y + 5)
-        .text(text)
-        .style("font-size", "12px")
-        .attr("alignment-baseline", "middle");
-    }
-
-    // "#b30000", "#7c1158", "#4421af", "#1a53ff", "#0d88e6" - new scheme
-    // "#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5"
-
-    createLegendPoint("#e60049", "Python", 10, 5)
-    createLegendPoint("#0bb4ff", "Javascript", 100, 5)
-    createLegendPoint("#50e991", "Low/No-code", 200, 5)
-    createLegendPoint("#e6d800", "SQL", 320, 5)
-    createLegendPoint("#ff9900", "Rust", 10, 25)
-    createLegendPoint("#9b19f5", "CLI/Service", 390, 5)
-
-    return svg.node();
-  }
-
-  window.onload = chartSkill()
-</script>
+<!-- d3 js for animated skill tree --->
+<script src="js/animated_skill_tree.js"></script>
 
 <!-- modal buttons -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Functions to open and close a modal
-    function openModal($el) {
-      $el.classList.add('is-active');
-    }
-
-    function closeModal($el) {
-      $el.classList.remove('is-active');
-    }
-
-    function closeAllModals() {
-      (document.querySelectorAll('.modal') || []).forEach(($modal) => {
-        closeModal($modal);
-      });
-    }
-
-    // Add a click event on buttons to open a specific modal
-    (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
-      const modal = $trigger.dataset.target;
-      const $target = document.getElementById(modal);
-
-      $trigger.addEventListener('click', () => {
-        openModal($target);
-      });
-    });
-
-    // Add a click event on various child elements to close the parent modal
-    (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
-      const $target = $close.closest('.modal');
-
-      $close.addEventListener('click', () => {
-        closeModal($target);
-      });
-    });
-
-    // Add a keyboard event to close all modals
-    document.addEventListener('keydown', (event) => {
-      const e = event || window.event;
-
-      if (e.keyCode === 27) { // Escape key
-        closeAllModals();
-      }
-    });
-  });
-</script>
-
-<!-- d3js for bolliger band chart -->
-<script crossorigin="anonymous">
-// Copyright 2021 Observable, Inc.
-// Released under the ISC license.
-// https://observablehq.com/@d3/bollinger-bands
-async function BollingerChart(path, {
-  x = ([x]) => x, // given d in data, returns the (temporal) x-value
-  y = ([, y]) => y, // given d in data, returns the (quantitative) y-value
-  N = 11, // number of periods for rolling mean
-  K = 2, // number of standard deviations to offset each band
-  func = "bollinger",
-  title, // for tooltip
-  curve = d3.curveLinear, // method of interpolation between points
-  marginTop = 20, // top margin, in pixels
-  marginRight = 30, // right margin, in pixels
-  marginBottom = 30, // bottom margin, in pixels
-  marginLeft = 40, // left margin, in pixels
-  width = 640, // outer width, in pixels
-  height = 400, // outer height, in pixels
-  xDomain, // [xmin, xmax]
-  xRange = [marginLeft, width - marginRight], // [left, right]
-  yDomain, // [ymin, ymax]
-  yRange = [height - marginBottom, marginTop], // [bottom, top]
-  yFormat, // a format specifier string for the y-axis
-  yLabel, // a label for the y-axis
-  colors = ["#aaa", "crimson", "darkcyan"], // color of the 4 lines
-  line_ids = ["observed", "lower", "upper"], // ids for lines
-  strokeWidth = 1.5, // width of lines, in pixels
-  strokeLinecap = "round", // stroke line cap of lines
-  strokeLinejoin = "round" // stroke line join of lines
-} = {}) {
-
-  // Load data
-  const data = await d3.csv(path)
-
-  const tParser = d3.timeParse("%Y-%m-%d")
-
-  // Compute values.
-  const X = d3.map(data, function(d) {return tParser(d.date)});
-  const Y = d3.map(data, function(d) {return Number(d.close)});
-  const bounds = [Y, ...[-K, +K].map(K => bollinger(N, K)(Y))]
-  const O = d3.map(data, d => d);
-  const I = d3.range(X.length);
-
-  // Compute default domains.
-  if (xDomain === undefined) xDomain = d3.extent(X);
-  if (yDomain === undefined) yDomain = [0, d3.max(Y)];
-
-  // Construct scales and axes.
-  const xScale = d3.scaleUtc(xDomain, xRange);
-  const yScale = d3.scaleLinear(yDomain, yRange);
-  const xAxis = d3.axisBottom(xScale).ticks(width / 80).tickSizeOuter(0);
-  const yAxis = d3.axisLeft(yScale).ticks(null, yFormat);
-
-  // Compute titles.
-  if (title === undefined) {
-    const formatDate = xScale.tickFormat(null, "%b %-d, %Y");
-    const formatValue = yScale.tickFormat(100, yFormat);
-    title = i => `${formatDate(X[i])}\nLower: ${formatValue(bounds[1][i])}\nActual: ${formatValue(Y[i])}\nUpper: ${formatValue(bounds[2][i])}`;
-  } else {
-    const O = d3.map(data, d => d);
-    const T = title;
-    title = i => T(O[i], i, data);
-  }
-
-  // Construct a line generator.
-  const line = d3.line()
-      .defined((y, i) => !isNaN(X[i]) && !isNaN(y))
-      .curve(curve)
-      .x((y, i) => xScale(X[i]))
-      .y((y, i) => yScale(y));
-
-  function bollinger(N, K) {
-    return values => {
-      let i = 0;
-      let sum = 0;
-      let sum2 = 0;
-      const Y = new Float64Array(values.length).fill(NaN);
-      for (let n = Math.min(N - 1, values.length); i < n; ++i) {
-        const value = values[i];
-        sum += value, sum2 += value ** 2;
-      }
-      for (let n = values.length; i < n; ++i) {
-        const value = values[i];
-        sum += value, sum2 += value ** 2;
-        const mean = sum / N;
-        const deviation = Math.sqrt((sum2 - sum ** 2 / N) / (N - 1));
-        Y[i] = mean + deviation * K;
-        const value0 = values[i - N + 1];
-        sum -= value0, sum2 -= value0 ** 2;
-      }
-      return Y;
-    };
-  }
-
-  const svg = d3.select("#bollinger-chart")
-
-  svg.attr("width", width)
-      .attr("height", height)
-      .attr("viewBox", [0, 0, width, height])
-      .attr("style", "max-width: 100%; height: auto; height: intrinsic; overflow: visible;")
-      .attr("font-family", "sans-serif")
-      .attr("font-size", 10)
-      .style("-webkit-tap-highlight-color", "transparent")
-      .style("overflow", "visible")
-      .on("pointerenter pointermove", pointermoved)
-      .on("pointerleave", pointerleft)
-      .on("touchstart", event => event.preventDefault());
-
-  svg.append("g")
-      .attr("transform", `translate(0,${height - marginBottom})`)
-      .call(xAxis);
-
-  svg.append("g")
-      .attr("transform", `translate(${marginLeft},0)`)
-      .call(yAxis)
-      .call(g => g.select(".domain").remove())
-      .call(g => g.selectAll(".tick line").clone()
-          .attr("x2", width - marginLeft - marginRight)
-          .attr("stroke-opacity", 0.1))
-      .call(g => g.append("text")
-          .attr("x", -marginLeft)
-          .attr("y", 10)
-          .attr("fill", "currentColor")
-          .attr("text-anchor", "start")
-          .text(yLabel));
-
-  if (func == "bollinger") {
-    svg.append("g")
-      .attr("fill", "none")
-      .attr("stroke-width", strokeWidth)
-      .attr("stroke-linejoin", strokeLinejoin)
-      .attr("stroke-linecap", strokeLinecap)
-    .selectAll()
-    .data([Y, ...[-K, +K].map(K => bollinger(N, K)(Y))])
-    .join("path")
-      .attr("stroke", (d, i) => colors[i])
-      .attr("id", (d, i) => line_ids[i])
-      .attr("d", line);
-  } else {
-    svg.append("g")
-      .attr("fill", "none")
-      .attr("stroke-width", strokeWidth)
-      .attr("stroke-linejoin", strokeLinejoin)
-      .attr("stroke-linecap", strokeLinecap)
-    .selectAll()
-    .data([Y, ...[-K, +K].map(K => smooth(N, K)(Y))])
-    .join("path")
-      .attr("stroke", (d, i) => colors[i])
-      .attr("id", (d, i) => line_ids[i])
-      .attr("d", line);
-  }
-
-  
-
-  const tooltip = svg.append("g")
-      .style("pointer-events", "none");
-
-  function pointermoved(event) {
-    const i = d3.bisectCenter(X, xScale.invert(d3.pointer(event)[0]));
-    tooltip.style("display", null);
-    tooltip.attr("transform", `translate(${xScale(X[i])},${yScale(Y[i])})`);
-
-    const path = tooltip.selectAll("path")
-      .data([,])
-      .join("path")
-        .attr("fill", "white")
-        .attr("stroke", "black");
-
-    const text = tooltip.selectAll("text")
-      .data([,])
-      .join("text")
-      .call(text => text
-        .selectAll("tspan")
-        .data(`${title(i)}`.split(/\n/))
-        .join("tspan")
-          .attr("x", 0)
-          .attr("y", (_, i) => `${i * 1.1}em`)
-          .attr("font-weight", (_, i) => i ? null : "bold")
-          .text(d => d));
-
-    const {x, y, width: w, height: h} = text.node().getBBox();
-    text.attr("transform", `translate(${-w / 2},${15 - y})`);
-    path.attr("d", `M${-w / 2 - 10},5H-5l5,-5l5,5H${w / 2 + 10}v${h + 20}h-${w + 20}z`);
-    svg.property("value", O[i]).dispatch("input", {bubbles: true});
-  }
-
-  function pointerleft() {
-    tooltip.style("display", "none");
-    svg.node().value = null;
-    svg.dispatch("input", {bubbles: true});
-  }
-
-  return svg.node();
-}
-
-function update_bollinger() {
-  // const svg = document.getElementById("bollinger-chart")
-
-  var lines = d3.selectAll("g")
-
-  lines.remove()
-  var func = document.getElementById("smoothing").value
-  var path = document.getElementById("bolliger_target").value
-  BollingerChart(path, {
-  yLabel: "↑ Daily close ($)",
-  func: func,
-  width: 640,
-  height: 600
-});
-}
-
-window.onload = BollingerChart("abbv.csv", {
-  yLabel: "↑ Daily close ($)",
-  width: 640,
-  height: 600
-});
-</script>
+<script src="js/modal_buttons.js"></script>
 
 </html>
