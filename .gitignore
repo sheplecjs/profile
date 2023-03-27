@@ -1,8 +1,8 @@
-# VS Code Settings
-.DS_Store
+# ide Settings
+.vscode
 
-# static assets
-assets/
+# other
+.DS_Store
 
 # python venv
 venv/
