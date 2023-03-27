@@ -10,7 +10,7 @@
           "shape": "circle",
           "color_code": "#e60049",
           "language": "python",
-          "projects_selector": "#qm, #bcad, #MSc, #cf, #sampqle, #thesis"
+          "projects_selector": "#qm, #bcad, #MSc, #cf, #sampqle, #msc"
         },
         {
           "name": "Polars",
@@ -138,14 +138,14 @@
           "shape": "circle",
           "color_code": "#e60049",
           "language": "python",
-          "projects_selector": "#MSc, #thesis"
+          "projects_selector": "#MSc, #msc"
         },
         {
           "name": "PyTorch",
           "shape": "circle",
           "color_code": "#e60049",
           "language": "python",
-          "projects_selector": "#MSc, #thesis"
+          "projects_selector": "#MSc, #msc"
         },
         {
           "name": "Keras-tuner",
@@ -159,7 +159,7 @@
           "shape": "circle",
           "color_code": "#e60049",
           "language": "python",
-          "projects_selector": "#MSc, #thesis"
+          "projects_selector": "#MSc, #msc"
         },
         {
           "name": "SDV",
@@ -195,7 +195,7 @@
           "shape": "circle",
           "color_code": "#e60049",
           "language": "python",
-          "projects_selector": "#qm, #cf, #thesis, #MSc"
+          "projects_selector": "#qm, #cf, #msc, #MSc"
         },
         {
           "name": "HTML",
@@ -258,21 +258,21 @@
           "shape": "circle",
           "color_code": "#9b19f5",
           "language": "cli",
-          "projects_selector": "#qm, #cf, #MSc, #bcad, #thesis, #sampqle, #collatz"
+          "projects_selector": "#qm, #cf, #MSc, #bcad, #msc, #sampqle, #collatz"
         },
         {
           "name": "Jupyter Notebooks",
           "shape": "circle",
           "color_code": "#e60049",
           "language": "python",
-          "projects_selector": "#cf, #MSc, #sampqle, #thesis"
+          "projects_selector": "#cf, #MSc, #sampqle, #msc"
         },
         {
           "name": "Poetry",
           "shape": "circle",
           "color_code": "#e60049",
           "language": "python",
-          "projects_selector": "#MSc, #sampqle, #thesis"
+          "projects_selector": "#MSc, #sampqle, #msc"
         },
         {
           "name": "Cargo",
