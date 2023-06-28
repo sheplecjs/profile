@@ -123,14 +123,14 @@
           "shape": "circle",
           "color_code": "#9b19f5",
           "language": "cli",
-          "projects_selector": "#qm"
+          "projects_selector": ""
         },
         {
           "name": "AWS Glue",
           "shape": "circle",
           "color_code": "#9b19f5",
           "language": "cli",
-          "projects_selector": "#qm"
+          "projects_selector": ""
         }
       ]
     },
