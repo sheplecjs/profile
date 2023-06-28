@@ -117,6 +117,20 @@
           "color_code": "#9b19f5",
           "language": "cli",
           "projects_selector": "#qm"
+        },
+        {
+          "name": "AWS Athena",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "cli",
+          "projects_selector": "#qm"
+        },
+        {
+          "name": "AWS Glue",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "cli",
+          "projects_selector": "#qm"
         }
       ]
     },
