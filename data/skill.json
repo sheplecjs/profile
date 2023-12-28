@@ -67,6 +67,20 @@
           "color_code": "#50e991",
           "language": "mixed",
           "projects_selector": "#qm, #bcad"
+        },
+        {
+          "name": "AWS Athena",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "sql",
+          "projects_selector": ""
+        },
+        {
+          "name": "Grafana",
+          "shape": "circle",
+          "color_code": "#50e991",
+          "language": "sql",
+          "projects_selector": ""
         }
       ]
     },
@@ -117,13 +131,6 @@
           "color_code": "#9b19f5",
           "language": "cli",
           "projects_selector": "#qm"
-        },
-        {
-          "name": "AWS Athena",
-          "shape": "circle",
-          "color_code": "#9b19f5",
-          "language": "cli",
-          "projects_selector": ""
         },
         {
           "name": "AWS Glue",
@@ -294,6 +301,20 @@
           "color_code": "#9b19f5",
           "language": "cli",
           "projects_selector": "#collatz"
+        },
+        {
+          "name": "pre-commit",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "cli",
+          "projects_selector": ""
+        },
+        {
+          "name": "Jinja2",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "python",
+          "projects_selector": ""
         }
       ]
     }
