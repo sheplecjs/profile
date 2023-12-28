@@ -71,14 +71,14 @@
         {
           "name": "AWS Athena",
           "shape": "circle",
-          "color_code": "#9b19f5",
+          "color_code": "#e6d800",
           "language": "sql",
           "projects_selector": ""
         },
         {
           "name": "Grafana",
           "shape": "circle",
-          "color_code": "#50e991",
+          "color_code": "#e6d800",
           "language": "sql",
           "projects_selector": ""
         }
