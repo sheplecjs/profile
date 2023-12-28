@@ -312,7 +312,7 @@
         {
           "name": "Jinja2",
           "shape": "circle",
-          "color_code": "#9b19f5",
+          "color_code": "#e60049",
           "language": "python",
           "projects_selector": ""
         }
