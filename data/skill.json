@@ -62,21 +62,36 @@
           "projects_selector": "#qm, #bcad"
         },
         {
-          "name": "Google Data Studio",
-          "shape": "circle",
-          "color_code": "#50e991",
-          "language": "mixed",
-          "projects_selector": "#qm, #bcad"
-        },
-        {
-          "name": "AWS Athena",
+          "name": "Grafana",
           "shape": "circle",
           "color_code": "#e6d800",
           "language": "sql",
           "projects_selector": ""
         },
         {
-          "name": "Grafana",
+          "name": "Looker Studio",
+          "shape": "circle",
+          "color_code": "#50e991",
+          "language": "mixed",
+          "projects_selector": "#qm, #bcad"
+        }
+      ]
+    },
+
+    {
+      "name": "Database",
+      "shape": "polygon",
+      "points": "0,-10 10,0 0,10",
+      "children": [
+        {
+          "name": "Postgresql",
+          "shape": "circle",
+          "color_code": "#e6d800",
+          "language": "sql",
+          "projects_selector": "#qm, #bcad, #sampqle, #collatz"
+        },
+        {
+          "name": "AWS Athena",
           "shape": "circle",
           "color_code": "#e6d800",
           "language": "sql",
@@ -90,13 +105,6 @@
       "shape": "polygon",
       "points": "0,-10 10,0 0,10",
       "children": [
-        {
-          "name": "Postgresql",
-          "shape": "circle",
-          "color_code": "#e6d800",
-          "language": "sql",
-          "projects_selector": "#qm, #bcad, #sampqle"
-        },
         {
           "name": "Airflow",
           "shape": "circle",
@@ -126,14 +134,50 @@
           "projects_selector": "#qm"
         },
         {
-          "name": "AWS Batch",
+          "name": "dbt",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "mixed",
+          "projects_selector": ""
+        }
+      ]
+    },
+
+    {
+      "name": "Cloud",
+      "shape": "polygon",
+      "points": "0,-10 10,0 0,10",
+      "children": [
+        {
+          "name": "AWS SDK",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "mixed",
+          "projects_selector": ""
+        },
+        {
+          "name": "AWS Lambda",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "mixed",
+          "projects_selector": ""
+        },
+        {
+          "name": "AWS Step Functions",
+          "shape": "circle",
+          "color_code": "#9b19f5",
+          "language": "mixed",
+          "projects_selector": ""
+        },
+        {
+          "name": "AWS S3",
           "shape": "circle",
           "color_code": "#9b19f5",
           "language": "cli",
           "projects_selector": "#qm"
         },
         {
-          "name": "AWS Glue",
+          "name": "AWS SAM",
           "shape": "circle",
           "color_code": "#9b19f5",
           "language": "cli",
@@ -310,7 +354,7 @@
           "projects_selector": ""
         },
         {
-          "name": "Jinja2",
+          "name": "Jinja",
           "shape": "circle",
           "color_code": "#e60049",
           "language": "python",

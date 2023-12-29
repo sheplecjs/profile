@@ -23,7 +23,7 @@ async function chartSkill() {
     .x((d) => d.y)
     .y((d) => d.x);
   const root = d3.hierarchy(data);
-  const HideOnLoad = ["Web", "ML/AI", "Other"];
+  const HideOnLoad = ["Web", "ML/AI", "Other", "Database", "ETL"];
   root.x0 = dy / 2;
   root.y0 = 0;
   root.descendants().forEach((d, i) => {
