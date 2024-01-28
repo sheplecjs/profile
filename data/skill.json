@@ -149,10 +149,10 @@
       "points": "0,-10 10,0 0,10",
       "children": [
         {
-          "name": "AWS SDK",
+          "name": "AWS CDK",
           "shape": "circle",
-          "color_code": "#9b19f5",
-          "language": "mixed",
+          "color_code": "#e60049",
+          "language": "python",
           "projects_selector": ""
         },
         {
