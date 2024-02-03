@@ -289,20 +289,6 @@
           "color_code": "#9b19f5",
           "language": "cli",
           "projects_selector": "#qm"
-        },
-        {
-          "name": "AWS EC2",
-          "shape": "circle",
-          "color_code": "#9b19f5",
-          "language": "cli",
-          "projects_selector": "#bcad, #MSc"
-        },
-        {
-          "name": "AWS S3/Glacier",
-          "shape": "circle",
-          "color_code": "#9b19f5",
-          "language": "cli",
-          "projects_selector": "#qm, #bcad"
         }
       ]
     },
