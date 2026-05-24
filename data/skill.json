@@ -96,6 +96,13 @@
           "color_code": "#e6d800",
           "language": "sql",
           "projects_selector": "#storm"
+        },
+        {
+          "name": "AWS Redshift",
+          "shape": "circle",
+          "color_code": "#e6d800",
+          "language": "sql",
+          "projects_selector": "#storm"
         }
       ]
     },
