@@ -67,6 +67,9 @@
 
   <!-- D3 js deps -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -75,13 +78,15 @@
       <div class="block">
         <nav class="breadcrumb" aria-label="breadcrumbs">
           <ul>
-            <li id="menu-bread"><a href="#" onclick="bring_to_front('menu', 'main-img', '300px')">
+            <li id="menu-bread"><a href="#" onclick="bring_to_front('menu')">
                 C Shepley
               </a></li>
 
             <li class="breads breads-hidden" id="viz-bread"><a href="#">Viz</a></li>
 
             <li class="breads breads-hidden" style="margin-left: -55px" id="about-bread"><a href="#">About</a></li>
+
+            <li class="breads breads-hidden" style="margin-left: -70px" id="blog-bread"><a href="#">Writing</a></li>
 
             <li class="breads breads-hidden"><a href="#">Components</a></li>
           </ul>
@@ -95,7 +100,7 @@
           </div>
           <div class="column is-two-thirds">
             <div class="box" style="text-align: center;">
-              <a href="#" onclick="bring_to_front('about', 'about-img', '100%'); tabbedContent();">
+              <a href="#" onclick="bring_to_front('about'); tabbedContent();">
                 <span class="icon-text">
                   <span class="icon">
                     <ion-icon name="finger-print-outline"></ion-icon>
@@ -128,6 +133,19 @@
                   </span>
                   <span class="subtitle">
                     <strong> Github</strong>
+                  </span>
+                </span>
+              </a>
+            </div>
+
+            <div class="box" style="text-align: center;">
+              <a href="#" onclick="bring_to_front('blog'); initBlog();">
+                <span class="icon-text">
+                  <span class="icon">
+                    <ion-icon name="create-outline"></ion-icon>
+                  </span>
+                  <span class="subtitle">
+                    <strong> Writing</strong>
                   </span>
                 </span>
               </a>
@@ -267,6 +285,15 @@
 
           </div>
         </div>
+
+        <!-- blog content -->
+        <div class="columns content-page is-centered" id="blog-div" style="position: absolute; visibility: hidden;">
+          <div class="column is-three-quarters">
+            <div class="box" id="blog-container">
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -605,5 +632,8 @@
 
 <!-- modal buttons -->
 <script src="js/modal_buttons.js"></script>
+
+<!-- blog -->
+<script src="js/blog.js"></script>
 
 </html>

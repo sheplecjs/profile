@@ -3,6 +3,7 @@
 
 # other
 .DS_Store
+.claude/
 
 # python venv
 venv/
