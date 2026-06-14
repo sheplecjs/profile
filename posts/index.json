@@ -8,7 +8,13 @@
   {
     "slug": "model-counting",
     "title": "What Does Your Data Say Without You?",
-    "date": "2026-06-14",
+    "date": "2026-06-03",
     "summary": "Grain and analytics agents"
+  },
+  {
+    "slug": "pepsi-can",
+    "title": "Bedrock Pepsi",
+    "date": "2026-06-14",
+    "summary": "Interpreting surprising data"
   }
 ]
