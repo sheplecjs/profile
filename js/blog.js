@@ -1,4 +1,5 @@
 async function initBlog() {
+  document.getElementById("blog-container").innerHTML = "";
   const index = await fetch("posts/index.json").then((r) => r.json());
   renderList(index);
 }
