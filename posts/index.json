@@ -16,5 +16,11 @@
     "title": "Bedrock Pepsi",
     "date": "2026-06-14",
     "summary": "Interpreting surprising data"
+  },
+  {
+    "slug": "declared-divergence",
+    "title": "Sameness by Default",
+    "date": "2026-09-28",
+    "summary": "An embedded metadata standard"
   }
 ]
