@@ -114,7 +114,6 @@ So what happens on Tuesdays?
 
 Tuesday, as it turns out, carries roughly a third of an average week's human page views. The bots don't care what day it is — they arrive in a fairly even drizzle, the way schedulers and crawl queues do, and if anything they ease off a little on Tuesdays. The people, all twenty-three percent of them, have a week. And the week has a peak.
 
-
 ![Human and bot share of sessions by day of the week.](human_bot_dow.png)
 
 I knew why almost before I'd finished reading the chart. Weekends, weather not permitting more interesting things, are when I work on personal projects. Something gets built or fixed or finally written on a Saturday, it goes up on Sunday, and on Monday it leaks into the working week — mentioned to a colleague, dropped into a conversation, brought up on a call with someone who might one day be a client. Tuesday is when somebody follows up and actually types the address. Cause, then a delay, then effect, each a day or so behind the last.

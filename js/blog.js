@@ -1,12 +1,22 @@
+// Posts render inside index.html, so relative image paths are resolved
+// against posts/ (where the .md lives) rather than the site root.
+function renderMarkdown(md) {
+  const tpl = document.createElement("template");
+  tpl.innerHTML = marked.parse(md);
+  tpl.content.querySelectorAll("img[src]").forEach((img) => {
+    const src = img.getAttribute("src");
+    if (!/^([a-z][a-z0-9+.-]*:|\/|#)/i.test(src)) img.setAttribute("src", `posts/${src}`);
+  });
+  return tpl.content;
+}
+
 async function initBlog() {
   document.getElementById("blog-container").innerHTML = "";
   const index = await fetch("posts/index.json").then((r) => r.json());
   await Promise.all(index.map(async (post) => {
     const md = await fetch(`posts/${post.slug}.md`).then((r) => r.text());
     post._md = md;
-    const scratch = document.createElement("div");
-    scratch.innerHTML = marked.parse(md);
-    post._svgs = Array.from(scratch.querySelectorAll("svg"));
+    post._svgs = Array.from(renderMarkdown(md).querySelectorAll("svg"));
   }));
   renderList(index);
 }
@@ -60,7 +70,7 @@ async function openPost(post, posts) {
     <hr>
     <div class="content is-size-6" id="blog-post-body"></div>
   `;
-  document.getElementById("blog-post-body").innerHTML = marked.parse(md);
+  document.getElementById("blog-post-body").replaceChildren(renderMarkdown(md));
   document.getElementById("blog-back").addEventListener("click", (e) => {
     e.preventDefault();
     renderList(posts);
