@@ -113,4 +113,4 @@ The metadata standard is still there. It is still well written. It just isn't do
 
 The best metadata standard is the one nobody has to remember.
 
-> Declared divergence: example [dashboards](portfolio.html)
+> Declared divergence: example [dashboards](examples/portfolio/portfolio.html)
