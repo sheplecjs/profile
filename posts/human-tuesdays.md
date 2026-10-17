@@ -108,7 +108,7 @@ Instructive? Yes. Interesting? Not at first. Where there's data though, question
 
 In reality, when all was said and done, there wasn't a great deal that was new here - the privacy and transparency tradeoffs, the balancing act that is defining session, a bit of javascript. The interesting bit happened after there were a few months of data that made clear this site is little more than a grain of sand sized speed bump on a bot superhighway:
 
-> Traffic: Bot or Not? [dashboard](examples/traffic/traffic.html)
+> Traffic: Bot or Not? <a href="examples/traffic/traffic.html" target="_blank">dashboard</a>
 
 So what happens on Tuesdays?
 
