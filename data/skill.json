@@ -10,7 +10,7 @@
           "shape": "circle",
           "color_code": "#e60049",
           "language": "python",
-          "projects_selector": "#qm, #bcad, #MSc, #cf, #sampqle, #msc"
+          "projects_selector": "#qm, #bcad, #MSc, #cf, #sampqle, #msc, #quack"
         },
         {
           "name": "Polars",
@@ -88,7 +88,7 @@
           "shape": "circle",
           "color_code": "#e6d800",
           "language": "sql",
-          "projects_selector": "#qm, #bcad, #sampqle, #collatz"
+          "projects_selector": "#qm, #bcad, #sampqle, #collatz, #quack"
         },
         {
           "name": "AWS Athena",
@@ -103,6 +103,13 @@
           "color_code": "#e6d800",
           "language": "sql",
           "projects_selector": "#storm"
+        },
+        {
+          "name": "duckdb",
+          "shape": "circle",
+          "color_code": "#e6d800",
+          "language": "sql",
+          "projects_selector": "#quack"
         }
       ]
     },
@@ -145,8 +152,15 @@
           "shape": "circle",
           "color_code": "#e60049",
           "language": "mixed",
-          "projects_selector": "#storm"
-        }
+          "projects_selector": "#storm, #quack"
+        },
+        {
+          "name": "dlt",
+          "shape": "circle",
+          "color_code": "#e60049",
+          "language": "mixed",
+          "projects_selector": "#quack"
+        }        
       ]
     },
 
@@ -232,13 +246,6 @@
           "color_code": "#e60049",
           "language": "python",
           "projects_selector": "#MSc, #msc"
-        },
-        {
-          "name": "SDV",
-          "shape": "circle",
-          "color_code": "#e60049",
-          "language": "python",
-          "projects_selector": "#sampqle"
         }
       ]
     },
@@ -309,7 +316,7 @@
           "shape": "circle",
           "color_code": "#9b19f5",
           "language": "cli",
-          "projects_selector": "#qm, #bcad, #MSc"
+          "projects_selector": "#qm, #bcad, #MSc, #quack"
         },
         {
           "name": "Git",
